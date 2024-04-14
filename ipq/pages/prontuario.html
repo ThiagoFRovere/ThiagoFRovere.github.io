@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão Prontuários</title>
+    <!-- link Css Style -->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.14/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;
+    0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+  
+
+</head>
+    <body>
+        <header>
+
+        </header>
+        <main class="container" >
+            <div class="home">
+                <form action="" class="form" id="form" >
+
+
+                    <div class="cabecario">
+                        <h1>REVISÃO DE PRONTUÁRIOS REALIZADA EM: </h1> 
+                        <input class="checkData input1" id="dateRevisaoProntuario" type="date" />
+                        
+                    </div>
+
+
+
+                    <div class="formulario1">
+                        <div class="dados1">
+                            <h3>N° Prontuário</h3>
+                            <input type="text" name="input1" class="input-group input1" id="numeroProntuario"  placeholder="">
+                            <h3>Nome Paciente</h3>
+                            <input type="text" name="input2" class="input-group input2" id="nomePaciente" placeholder="">
+                            <h3>Sigla Nome</h3>
+                            <input type="text" name="input3" class="input-group input3" id="siglaNome" placeholder="">
+                        </div>
+                        <div class="dados1">
+                            <h3>Gênero</h3>
+                            <select class="form-select selectCampo"  name="select1" id="selectGenero">
+                                <option selected>Selecionar</option>
+                                <option value="Feminino">Feminino</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                            <h3>Data Nascimento</h3>
+                            <input class="checkData date2" id="dateNascimento" type="date" />
+                            <h3>Unidade</h3>
+                            <select class="form-select selectCampo"  name="select2" id="selectUnidade">
+                                <option selected>Selecionar</option>
+                                <option value="1° Masculina">1° Masculina</option>
+                                <option value="2° Masculina">2° Masculina</option>
+                                <option value="CCS1">CCS1</option>
+                                <option value="CCS2">CCS2</option>
+                                <option value="2° Feminina">2° Feminina</option>
+                                <option value="5° Feminina">5° Feminina</option>
+                                <option value="UGP">UGP</option>
+                                <option value="UDQ">UDQ</option>
+                                <option value="UAA">UAA</option>
+                            </select>
+                            
+                            <h3>Categoria</h3>
+                            <select class="form-select selectCampo"  name="select3" id="selectCategoria">
+                                <option selected>Selecionar</option>
+                                <option value="Agudo">Agudo</option>
+                                <option value="Crônico">Crônico</option>
+                            </select>
+                        </div>
+                        <div class="dados1">
+                            <h3>Médico(a) Assistente</h3>
+                            <select class="form-select selectCampo"  name="select4" id="selectMedicoAssistente">
+                                <option selected>Selecionar</option>
+                                <option value="Nome do Médico 1">Nome do Médico 1</option>
+                                <option value="Nome do Médico 2">Senho Fulado de araujo</option>
+                                <option value="Nome do Médico 3">Nome do Médico 3</option>
+                                <option value="Nome do Médico 4">Nome do Médico 4</option>
+                                <option value="Nome do Médico 5">Nome do Médico 5</option>
+                                <option value="Nome do Médico 6">Nome do Médico 6</option>
+                                <option value="Nome do Médico 7">Nome do Médico 7</option>
+                                <option value="Nome do Médico 8">Nome do Médico 8</option>
+                                <option value="Nome do Médico 9">Nome do Médico 9</option>
+                                <option value="Nome do Médico 10">Nome do Médico 10</option>
+                                <option value="Nome do Médico 11">Nome do Médico 11</option>
+                                <option value="Nome do Médico 12">Nome do Médico 12</option>
+                                <option value="Nome do Médico 13">Nome do Médico 13</option>
+                                <option value="Nome do Médico 14">Nome do Médico 14</option>
+                                <option value="Nome do Médico 15">Nome do Médico 15</option>
+                                <option value="Nome do Médico 16">Nome do Médico 16</option>
+                                <option value="Nome do Médico 17">Nome do Médico 17</option>
+                                <option value="Nome do Médico 18">Nome do Médico 18</option>
+                                <option value="Nome do Médico 19">Nome do Médico 19</option>
+                                <option value="Nome do Médico 20">Nome do Médico 20</option>
+                                <option value="Nome do Médico 21">Nome do Médico 21</option>
+                                <option value="Nome do Médico 22">Nome do Médico 22</option>
+                                <option value="Nome do Médico 23">Nome do Médico 23</option>
+                                <option value="Nome do Médico 24">Nome do Médico 24</option>
+                                <option value="Nome do Médico 25">Nome do Médico 25</option>
+                                <option value="Nome do Médico 26">Nome do Médico 26</option>
+                                <option value="Nome do Médico27">Nome do Médico 27</option>
+                                <option value="Nome do Médico 28">Nome do Médico 28</option>
+                                <option value="Nome do Médico 29">Nome do Médico 29</option>
+                                <option value="Nome do Médico 30">Nome do Médico 30</option>
+                            </select>
+                            <h3>Enfermeiro(a)</h3>
+                            <select class="form-select selectCampo"  name="select5" id="selectEnfermeiro">
+                                <option selected>Selecionar</option>
+                                <option value="Enfermeira 1">Enfermeira 1</option>
+                                <option value="Enfermeira 2">Senho Fulado de araujo</option>
+                                <option value="Enfermeira 3">Enfermeira 3</option>
+                                <option value="Enfermeira 4">Enfermeira 4</option>
+                                <option value="Enfermeira 5">Enfermeira 5</option>
+                                <option value="Enfermeira 6">Enfermeira 6</option>
+                                <option value="Enfermeira 7">Enfermeira 7</option>
+                                <option value="Enfermeira 8">Enfermeira 8</option>
+                                <option value="Enfermeira 9">Enfermeira 9</option>
+                            </select>
+                        </div>
+                        <div class="dados1">
+                            <h3>Médico(a) Plantonista</h3>
+                            <select class="form-select selectCampo"  name="select6" id="selectMedicoPlantinista">
+                                <option selected>Selecionar</option>
+                                <option value="Nome do Médico 1">Nome do Médico 1</option>
+                                <option value="Nome do Médico 2">Senho Fulado de araujo</option>
+                                <option value="Nome do Médico 3">Nome do Médico 3</option>
+                                <option value="Nome do Médico 4">Nome do Médico 4</option>
+                                <option value="Nome do Médico 6">Nome do Médico 6</option>
+                                <option value="Nome do Médico 7">Nome do Médico 7</option>
+                                <option value="Nome do Médico 8">Nome do Médico 8</option>
+                                <option value="Nome do Médico 9">Nome do Médico 9</option>
+                                <option value="Nome do Médico 10">Nome do Médico 10</option>
+                                <option value="Nome do Médico 11">Nome do Médico 11</option>
+                                <option value="Nome do Médico 12">Nome do Médico 12</option>
+                                <option value="Nome do Médico 13">Nome do Médico 13</option>
+                                <option value="Nome do Médico 14">Nome do Médico 14</option>
+                                <option value="Nome do Médico 15">Nome do Médico 15</option>
+                            </select>
+                            <h3>Médico(a) Residente</h3>
+                            <select class="form-select selectCampo"  name="select7" id="selectMedicoresidente">
+                                <option selected>Selecionar</option>
+                                <option value="Médico Residente 1">Nome do Médico Residente 1</option>
+                                <option value="Médico Residente 2">Senho Fulado de araujo</option>
+                                <option value="Médico Residente 3">Nome do Médico Residente 3</option>
+                                <option value="Médico Residente 4">Nome do Médico Residente 4</option>
+                                <option value="Médico Residente 5">Nome do Médico Residente 5</option>
+                                <option value="Médico Residente 6">Nome do Médico Residente 6</option>
+                                <option value="Médico Residente 7">Nome do Médico Residente 7</option>
+                                <option value="Médico Residente 8">Nome do Médico Residente 8</option>
+                                <option value="Médico Residente 9">Nome do Médico Residente 9</option>
+                                <option value="Médico Residente 10">Nome do Médico Residente 10</option>
+                                <option value="Médico Residente 11">Nome do Médico Residente 11</option>
+                                <option value="Médico Residente 12">Nome do Médico Residente 12</option>
+                                <option value="Médico Residente 13">Nome do Médico Residente 13</option>
+                                <option value="Médico Residente 14">Nome do Médico Residente 14</option>
+                                <option value="Médico Residente 15">Nome do Médico Residente 15</option>
+                                <option value="Médico Residente 16">Nome do Médico Residente 16</option>
+                                <option value="Médico Residente 17">Nome do Médico Residente 17</option>
+                                <option value="Médico Residente 18">Nome do Médico Residente 18</option>
+                                <option value="Médico Residente 19">Nome do Médico Residente 19</option>
+                                <option value="Médico Residente 20">Nome do Médico Residente 20</option>
+                                <option value="Médico Residente 21">Nome do Médico Residente 21</option>
+                                <option value="Médico Residente 22">Nome do Médico Residente 22</option>
+                                <option value="Médico Residente 23">Nome do Médico Residente 23</option>
+                                <option value="Médico Residente 24">Nome do Médico Residente 24</option>
+                                <option value="Médico Residente 25">Nome do Médico Residente 25</option>
+                                <option value="Médico Residente 26">Nome do Médico Residente 26</option>
+                                <option value="Médico Residente 27">Nome do Médico Residente 27</option>
+                                <option value="Médico Residente 28">Nome do Médico Residente 28</option>
+                                <option value="Médico Residente 29">Nome do Médico Residente 29</option>
+                                <option value="Médico Residente 30">Nome do Médico Residente 30</option>
+                            </select>
+                            
+                        </div>
+                        <div class="dados1">
+                            <h3>Data Inter. Atual</h3>
+                            <input class="checkData date3" id="dateInterAtual" type="date" />
+                            <h3>Data Alta Médica</h3>
+                            <input class="checkData date4" id="dateAltaMedica" type="date" />
+                            <h3>Data Saída Hospital</h3>
+                            <input class="checkData date5" id="dateSaidaHospital" type="date" />
+                            
+                        </div>
+                        <div class="dados1">
+                            <h3>Primeira Internação</h3>
+                            <select class="form-select selectCampo select8"  name="select8" id="selectPrimeiraInternacao">
+                                <option selected>Selecionar</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        <h3>N° Internações</h3>
+                            <input type="text" class="input-group input4" id="nInternacao" placeholder="">
+                            <h3>Int. Sub Judice</h3>
+                            <select class="form-select selectCampo select9"  name="select9" id="selectIntSubJudice">
+                                <option selected>Selecionar</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div>
+                        <div class="dados1">
+                            <h3>Data Primeira Internação</h3>
+                            <input class="checkData date6" id="dataPrimInternacao" type="date" />
+                            <h3 id="esp1"></h3>
+                            <h3>Data Alta Internação Anterior</h3>
+                            <input class="checkData date7" id="dataAltaInterAnterior" type="date" />
+                        </div>
+                        <div class="dados1">
+                            <h3>N° prescrição Medica Total</h3>
+                            <input type="text" class="input-group input5" id="nPresMedTotal" placeholder="">
+                            <h3>N° Evol. Médica Total</h3>
+                            <input type="text" class="input-group input6" id="nEvolMedTotal" placeholder="">
+                            <h3>N° Evol. Psicol. Total</h3>
+                            <input type="text" class="input-group input7" id="nEvolPsicolTotal" placeholder="">   
+                        </div>
+                        <div class="dados1">
+                            <h3>N° Evol. Enfermagem Total</h3>
+                            <input type="text" class="input-group input8" id="nEvolEnferTotal" placeholder="">
+                            <h3>N° Evolução T. O. Total</h3>
+                            <input type="text" class="input-group input9" id="nEvolTOTotal" placeholder="">
+                            <h3>N° Evol. Serv. Social Total</h3>
+                            <input type="text" class="input-group input10" id="nEvolServSociTotal" placeholder="">
+                            
+                        </div>
+                    </div>
+
+
+
+                    <div class="formulario2">
+                        <div class="quali1">
+                            <h3 id="espaco">Reg. Anamnese internação</h3>                            
+                                <select class="selectQuali selectQuali1" id="regAnamneseInternacao" name="select2.1">
+                                    <option selected>Selecionar</option>
+                                    <option value="Insuficiente">Insuficiente</option>
+                                    <option value="Satisfatório">Satisfatório</option>
+                                    <option value="Excelente">Excelente</option>
+                                </select>                        
+                            <h3 id="espaco1">Qualidade dos Registros Médicos</h3>
+                            <select class="selectQuali selectQuali2" id="qualidadeDosRegistrosMedicos" name="select2.2">
+                                <option selected>Selecionar</option>
+                                <option value="Insuficiente">Insuficiente</option>
+                                <option value="Satisfatório">Satisfatório</option>
+                                <option value="Excelente">Excelente</option>
+                            </select>
+                        </div>
+                        <div class="quali1">
+                            <h3 id="espaco">Assinatura e Carimbo Prof. Nível Superior</h3>
+                                <select class="selectQuali selectQuali13" id="assinaturaCarimboProfNivelSuperior" name="select2.3">
+                                    <option selected>Selecionar</option>
+                                    <option value="Sim">Sim</option>
+                                    <option value="Não">Não</option>
+                                </select>                           
+                            <h3 id="espaco1">Qualidade dos Registros Enfermagem</h3>
+                            <select class="selectQuali selectQuali4" id="qualidadeRegistrosEnfermagem" name="select2.4">
+                                <option selected>Selecionar</option>
+                                <option value="Insuficiente">Insuficiente</option>
+                                <option value="Satisfatório">Satisfatório</option>
+                                <option value="Excelente">Excelente</option>
+                            </select>
+                        </div>
+                        <div class="quali1">
+                            <h3 id="espaco">Checagem Prescrição Médica</h3>                            
+                                <select class="selectQuali selectQuali5" id="checagemPrescricaoMedica" name="select2.5">
+                                    <option selected>Selecionar</option>
+                                    <option value="Sim">Sim</option>
+                                    <option value="Não">Não</option>
+                                </select>                           
+                            <h3 id="espaco1">Qualidade dos Registros Serviço Social</h3>
+                            <select class="selectQuali selectQuali6" id="qualidadeRegistrosServicoSocial" name="select2.6">
+                                <option selected>Selecionar</option>
+                                <option value="Insuficiente">Insuficiente</option>
+                                <option value="Satisfatório">Satisfatório</option>
+                                <option value="Excelente">Excelente</option>
+                            </select>
+                        </div>
+                        <div class="quali1">
+                            <h3 id="espaco">Anotações Téc. em Enfermagem</h3>                           
+                                <select class="selectQuali selectQuali7" id="anotacoesTecnicoEnfermagem" name="select2.7">
+                                    <option selected>Selecionar</option>
+                                    <option value="Sim">Sim</option>
+                                    <option value="Não">Não</option>
+                                </select>                           
+                            <h3 id="espaco1">Qualidade dos Registros T. Ocupacional</h3>
+                            <select class="selectQuali selectQuali8" id="qualidadeRegistrosTerapiaOcupacional" name="select2.8">
+                                <option selected>Selecionar</option>
+                                <option value="Insuficiente">Insuficiente</option>
+                                <option value="Satisfatório">Satisfatório</option>
+                                <option value="Excelente">Excelente</option>
+                            </select>
+                        </div>
+                        <div class="quali1">
+                            <h3 id="espaco">Legibilidade</h3>                           
+                                <select class="selectQuali selectQuali9" id="legibilidade" name="select2.9">
+                                    <option selected>Selecionar</option>
+                                    <option value="Insuficiente">Insuficiente</option>
+                                    <option value="Satisfatório">Satisfatório</option>
+                                    <option value="Excelente">Excelente</option>
+                                </select>                         
+                            <h3 id="espaco1">Qualidade dos Registros Psicologia</h3>
+                            <select class="selectQuali selectQuali10" id="qualidadeRegistrosPsicologia" name="select2.10">
+                                <option selected>Selecionar</option>
+                                <option value="Insuficiente">Insuficiente</option>
+                                <option value="Satisfatório">Satisfatório</option>
+                                <option value="Excelente">Excelente</option>
+                            </select>
+                        </div>
+                        <div class="quali1">
+                            <h3 id="espaco">Adequação Medicação Psiquiatrica</h3>                           
+                                <select class="selectQuali selectQuali11" id="adequacaoMedicacaoPsiquiatrica" name="select2.11">
+                                    <option selected>Selecionar</option>
+                                    <option value="Sim">Sim</option>
+                                    <option value="Não">Não</option>
+                                </select>                            
+                            <h3 id="espaco1">Qualidade dos Registros Educação Física</h3>
+                            <select class="selectQuali selectQuali12" id="qualidadeRegistrosEducaçãoFisica" name="select2.12">
+                                <option selected>Selecionar</option>
+                                <option value="Insuficiente">Insuficiente</option>
+                                <option value="Satisfatório">Satisfatório</option>
+                                <option value="Excelente">Excelente</option>
+                            </select>
+                        </div>
+                        <div class="quali1">
+                            <h3 id="espaco">Organização</h3>                           
+                                <select class="selectQuali selectQuali13" id="organizacao" name="select2.13">
+                                    <option selected>Selecionar</option>
+                                    <option value="Insuficiente">Insuficiente</option>
+                                    <option value="Satisfatório">Satisfatório</option>
+                                    <option value="Excelente">Excelente</option>
+                                </select>                           
+                            <h3 id="espaco1">Registro Proc. Clínicos (Carteira Saúde)</h3>
+                            <select class="selectQuali selectQuali14" id="registroProcClinicos" name="select2.14">
+                                <option selected>Selecionar</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div>
+                        <div class="quali1">
+                            <h3 id="espaco">Resumo Alta Médica</h3>
+                                <select class="selectQuali selectQuali15" id="resumoAltaMedica" name="select2.15">
+                                    <option selected>Selecionar</option>
+                                    <option value="Insuficiente">Insuficiente</option>
+                                    <option value="Satisfatório">Satisfatório</option>
+                                    <option value="Excelente">Excelente</option>
+                                </select>
+                            
+                            <h3 id="espaco1">Cumprimento do Projeto Terapêutico</h3>
+                            <select class="selectQuali selectQuali16" id="cumprimentoProjetoTerapeutico" name="select2.16">
+                                <option selected>Selecionar</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div>
+                        <div class="quali1">
+                            <h3 id="espaco">Resumo Alta Psicosocial</h3>
+                            
+                                <select class="selectQuali selectQuali17" id="resumoAltaPsicosocial" name="select2.17">
+                                    <option selected>Selecionar</option>
+                                    <option value="Insuficiente">Insuficiente</option>
+                                    <option value="Satisfatório">Satisfatório</option>
+                                    <option value="Excelente">Excelente</option>
+                                </select>
+                            
+                            <h3 id="espaco1">Dados Jurídicos(em caso de pac. Sub Júdice)</h3>
+                            <select class="selectQuali selectQuali18" id="dadosJuridicos" name="select2.18">
+                                <option selected>Selecionar</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Nao">Não</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="formulario3">
+                        <div class="doenca1">
+                            <h3>Intercorrência Clínica 1</h3>
+                                <select class="fromDoenca doencaCampo1"  name="select1" id="doencaCampo1">
+                                    <option selected>Selecionar</option>
+                                    <option value="Diabetes">Diabetes</option>
+                                    <option value="Hipertensão">Hipertensão</option>
+                                    <option value="Hipotensão">Hipotensão</option>
+                                    <option value="AVC">AVC</option>
+                                    <option value="Infarto-IAM">Infarto-IAM</option>
+                                    <option value="HIV">HIV</option>
+                                    <option value="Tuberculose">Tuberculose</option>
+                                    <option value="Hepatite">Hepatite</option>
+                                    <option value="DPOC">DPOC</option>
+                                    <option value="Patologia neurológica">Patologia neurológica</option> 
+                                    <option value="Constipação Intestinal">Constipação Intestinal</option>
+                                    <option value="Dispepsia">Dispepsia</option>
+                                    <option value="ICC - Insuf. Cardíaca Congestiva">ICC - Insuf. Cardíaca Congestiva</option>
+                                    <option value="Circulatória MMII">Circulatória MMII</option>
+                                    <option value="Dislipidemia">Dislipidemia</option>
+                                    <option value="Câncer">Câncer</option>
+                                    <option value="Alergia">Alergia</option>
+                                    <option value="Infecção intestinal">Infecção intestinal</option>
+                                    <option value="Doenças venéreas">Doenças venéreas</option>
+                                    <option value="Anemia">Anemia</option>
+                                    <option value="Febre reumática">Febre reumática</option>
+                                    <option value="IVAS">IVAS</option>
+                                    <option value="Doenças aparelho urinário">Doenças aparelho urinário</option>
+                                    <option value="Doenças órgãos genitais">Doenças órgãos genitais</option>
+                                    <option value="Fraturas">Fraturas</option>
+                                    <option value="Luxações, entorses e contusões">Luxações, entorses e contusões</option>
+                                    <option value="Corpos estranhos em orifícios naturais">Corpos estranhos em orifícios naturais</option>
+                                    <option value="Queimadura">Queimadura</option>
+                                    <option value="Intoxicação por produtos químicos">Intoxicação por produtos químicos</option>
+                                    <option value="Outras lesões dermatológicas">Outras lesões dermatológicas</option>
+                                    <option value="Micoses">Micoses</option>
+                                    <option value="Tumor benigno">Tumor benigno</option>
+                                    <option value="Alteração glândula tiróide">Alteração glândula tiróide</option>
+                                    <option value="Pneumonia">Pneumonia</option>
+                                    <option value="Asma/Bronquite">Asma/Bronquite</option>
+                                    <option value="Lupus">Lupus</option>
+                                    <option value="Escabiose/pediculose">Escabiose/pediculose</option>
+                                    <option value="Lesões corto-cortusas">Lesões corto-cortusas</option>
+                                </select>
+                                <h3>Evolução 1</h3>
+                                <select class="fromDoenca doencaCampo2"  name="select2" id="doencaCampo2">
+                                    <option selected>Selecionar</option>
+                                    <option value="Evolução">Evolução</option>
+                                    <option value="Curado">Curado</option>
+                                    <option value="Melhorado">Melhorado</option>
+                                    <option value="Encaminhado">Encaminhado</option>
+                                    <option value="Óbito">Óbito</option>
+                                    <option value="Investigado">Investigado</option>
+                                    <option value="Diagnosticado">Diagnosticado</option>
+                                </select>
+                        </div>
+                        <div class="doenca1">
+                            <h3>Intercorrência Clínica 2</h3>
+                                <select class="fromDoenca doencaCampo3"  name="select3" id="doencaCampo3">
+                                    <option selected>Selecionar</option>
+                                    <option value="Diabetes">Diabetes</option>
+                                    <option value="Hipertensão">Hipertensão</option>
+                                    <option value="Hipotensão">Hipotensão</option>
+                                    <option value="AVC">AVC</option>
+                                    <option value="Infarto-IAM">Infarto-IAM</option>
+                                    <option value="HIV">HIV</option>
+                                    <option value="Tuberculose">Tuberculose</option>
+                                    <option value="Hepatite">Hepatite</option>
+                                    <option value="DPOC">DPOC</option>
+                                    <option value="Patologia neurológica">Patologia neurológica</option> 
+                                    <option value="Constipação Intestinal">Constipação Intestinal</option>
+                                    <option value="Dispepsia">Dispepsia</option>
+                                    <option value="ICC - Insuf. Cardíaca Congestiva">ICC - Insuf. Cardíaca Congestiva</option>
+                                    <option value="Circulatória MMII">Circulatória MMII</option>
+                                    <option value="Dislipidemia">Dislipidemia</option>
+                                    <option value="Câncer">Câncer</option>
+                                    <option value="Alergia">Alergia</option>
+                                    <option value="Infecção intestinal">Infecção intestinal</option>
+                                    <option value="Doenças venéreas">Doenças venéreas</option>
+                                    <option value="Anemia">Anemia</option>
+                                    <option value="Febre reumática">Febre reumática</option>
+                                    <option value="IVAS">IVAS</option>
+                                    <option value="Doenças aparelho urinário">Doenças aparelho urinário</option>
+                                    <option value="Doenças órgãos genitais">Doenças órgãos genitais</option>
+                                    <option value="Fraturas">Fraturas</option>
+                                    <option value="Luxações, entorses e contusões">Luxações, entorses e contusões</option>
+                                    <option value="Corpos estranhos em orifícios naturais">Corpos estranhos em orifícios naturais</option>
+                                    <option value="Queimadura">Queimadura</option>
+                                    <option value="Intoxicação por produtos químicos">Intoxicação por produtos químicos</option>
+                                    <option value="Outras lesões dermatológicas">Outras lesões dermatológicas</option>
+                                    <option value="Micoses">Micoses</option>
+                                    <option value="Tumor benigno">Tumor benigno</option>
+                                    <option value="Alteração glândula tiróide">Alteração glândula tiróide</option>
+                                    <option value="Pneumonia">Pneumonia</option>
+                                    <option value="Asma/Bronquite">Asma/Bronquite</option>
+                                    <option value="Lupus">Lupus</option>
+                                    <option value="Escabiose/pediculose">Escabiose/pediculose</option>
+                                    <option value="Lesões corto-cortusas">Lesões corto-cortusas</option>
+                                </select>
+                                <h3>Evolução 2</h3>
+                                <select class="fromDoenca doencaCampo4"  name="select4" id="doencaCampo4">
+                                    <option selected>Selecionar</option>
+                                    <option value="Evolução">Evolução</option>
+                                    <option value="Curado">Curado</option>
+                                    <option value="Melhorado">Melhorado</option>
+                                    <option value="Encaminhado">Encaminhado</option>
+                                    <option value="Óbito">Óbito</option>
+                                    <option value="Investigado">Investigado</option>
+                                    <option value="Diagnosticado">Diagnosticado</option>
+                                </select>
+                        </div>
+                        <div class="doenca1">
+                            <h3>Intercorrência Clínica 3</h3>
+                                <select class="fromDoenca doencaCampo5"  name="select5"  id="doencaCampo5">
+                                    <option selected>Selecionar</option>
+                                    <option value="Diabetes">Diabetes</option>
+                                    <option value="Hipertensão">Hipertensão</option>
+                                    <option value="Hipotensão">Hipotensão</option>
+                                    <option value="AVC">AVC</option>
+                                    <option value="Infarto-IAM">Infarto-IAM</option>
+                                    <option value="HIV">HIV</option>
+                                    <option value="Tuberculose">Tuberculose</option>
+                                    <option value="Hepatite">Hepatite</option>
+                                    <option value="DPOC">DPOC</option>
+                                    <option value="Patologia neurológica">Patologia neurológica</option> 
+                                    <option value="Constipação Intestinal">Constipação Intestinal</option>
+                                    <option value="Dispepsia">Dispepsia</option>
+                                    <option value="ICC - Insuf. Cardíaca Congestiva">ICC - Insuf. Cardíaca Congestiva</option>
+                                    <option value="Circulatória MMII">Circulatória MMII</option>
+                                    <option value="Dislipidemia">Dislipidemia</option>
+                                    <option value="Câncer">Câncer</option>
+                                    <option value="Alergia">Alergia</option>
+                                    <option value="Infecção intestinal">Infecção intestinal</option>
+                                    <option value="Doenças venéreas">Doenças venéreas</option>
+                                    <option value="Anemia">Anemia</option>
+                                    <option value="Febre reumática">Febre reumática</option>
+                                    <option value="IVAS">IVAS</option>
+                                    <option value="Doenças aparelho urinário">Doenças aparelho urinário</option>
+                                    <option value="Doenças órgãos genitais">Doenças órgãos genitais</option>
+                                    <option value="Fraturas">Fraturas</option>
+                                    <option value="Luxações, entorses e contusões">Luxações, entorses e contusões</option>
+                                    <option value="Corpos estranhos em orifícios naturais">Corpos estranhos em orifícios naturais</option>
+                                    <option value="Queimadura">Queimadura</option>
+                                    <option value="Intoxicação por produtos químicos">Intoxicação por produtos químicos</option>
+                                    <option value="Outras lesões dermatológicas">Outras lesões dermatológicas</option>
+                                    <option value="Micoses">Micoses</option>
+                                    <option value="Tumor benigno">Tumor benigno</option>
+                                    <option value="Alteração glândula tiróide">Alteração glândula tiróide</option>
+                                    <option value="Pneumonia">Pneumonia</option>
+                                    <option value="Asma/Bronquite">Asma/Bronquite</option>
+                                    <option value="Lupus">Lupus</option>
+                                    <option value="Escabiose/pediculose">Escabiose/pediculose</option>
+                                    <option value="Lesões corto-cortusas">Lesões corto-cortusas</option>
+                                </select>
+                                <h3>Evolução 3</h3>
+                                <select class="fromDoenca doencaCampo6"  name="select6" id="doencaCampo6">
+                                    <option selected>Selecionar</option>
+                                    <option value="Evolução">Evolução</option>
+                                    <option value="Curado">Curado</option>
+                                    <option value="Melhorado">Melhorado</option>
+                                    <option value="Encaminhado">Encaminhado</option>
+                                    <option value="Óbito">Óbito</option>
+                                    <option value="Investigado">Investigado</option>
+                                    <option value="Diagnosticado">Diagnosticado</option>
+                                </select>
+                        </div>
+                    </div>
+
+                    <div class="formulario4">
+                        <div class="observacao">
+                            <h3>Observações</h3>
+                        </div>
+                        <div class="campoObservacao">
+                            <textarea class="textearea" id="textarea"></textarea> 
+                        </div>
+                    </div>
+
+                    <div class="formulario5">
+                        <div class="observacao">
+                            <h3>Médico(a) Revisor</h3>
+                        </div>
+                        <div class="medicoRevisor">
+                            <select class="selectMReviso selectCampo "  name="select1" id="nomeMedicoRevisor">
+                                <option selected>Selecionar</option>
+                                <option value="Selecionar no Médico Revisor">Selecionar no Médico Revisor</option>
+                                <option value="Selecionar no Médico Revisor">Selecionar no Médico Revisor</option>
+                                <option value="Selecionar no Médico Revisor">Selecionar no Médico Revisor</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button onclick="window.print()">Imprimir</button>
+                        <button onclick="enviarFormulario()" class="submit" type="submit" name="submit" id="submit" value="enviarFormulario"> Salvar </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            
+        </footer>
+
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+        <script src="./JS/script.js"></script>
+    </body>
+</html>
