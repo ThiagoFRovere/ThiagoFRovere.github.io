@@ -1,0 +1,51 @@
+/*******************************************************************************************************************/
+/*                                       CONTEUDO PRINCIPAL                                                        */  
+/*******************************************************************************************************************/
+
+main .containerPrincipal .banner{    
+    width: 90%;
+    margin-left: 10%;
+    height: 500px;
+    background: url(../pictures/image-background.jpg) no-repeat ;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*******************************************************************************************************************/
+/*                                               MEDIA QUERIES                                                     */  
+/*******************************************************************************************************************/
+
+
+@media(max-width:1677px){
+
+}
+@media(max-width:1450px){
+
+}
+@media(max-width:1350px){
+
+}
+
+@media(max-width:1080px){
+
+    main .containerPrincipal .conteudo {
+        width: 100%;
+        margin-left: 0%;
+        height: 100%;
+    }
+    main .containerPrincipal .conteudo .banner{
+        width: 100%;
+        margin-left: 0%;
+    }
+    main .containerPrincipal .conteudo #nameRI{
+        margin-top: 25%;   
+    }
+    main .containerPrincipal .conteudo .tabela{
+        margin-top: 20%;
+    }
+    footer{
+        margin-left: 0%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,65 @@
+/*******************************************************************************************************************/
+/*                                       CONTEUDO PRINCIPAL                                                        */  
+/*******************************************************************************************************************/
+main .mainContainer .content{
+    width: 100%;
+    margin-left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+main .mainContainer .content .galery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+main .mainContainer .content .galery img{
+    width: 350px;
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 10px solid #fff;
+    box-shadow: 5px 5px 5px #0006;
+    flex-grow: 1;
+}
+
+footer{
+    margin-top: 100px;
+}
+/*******************************************************************************************************************/
+/*                                               MEDIA QUERIES                                                     */  
+/*******************************************************************************************************************/
+
+
+
+@media(max-width:1700px){
+    
+}
+@media(max-width:1450px){
+
+}
+@media(max-width:1350px){
+
+    main .mainContainer .content .galery img{
+        width: 250px;
+        height: 160px;
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:1080px){
+    main .mainContainer .content{
+        margin-left: 0px;
+    }
+}
+@media(max-width:965px){
+   
+}
+@media(max-width:550px){
+   
+}
