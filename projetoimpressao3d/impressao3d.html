@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Custo Impressão 3D</title>
+    <link rel="stylesheet" href="./css2/style2.css">
+</head>
+<body>
+    <main>
+        <div class="main">
+            <div id="text-header">
+                <h1 id="titulo">Calcular Custo Impressão 3D</h1>
+                <h2>Filamento / Resina</h2>
+                <h5>OBS: preencha os campos para os valor quebrado utilizando o Ponto '.' não use virgura ',' </h5>
+                <h5>OBS: campo material utilizar para valores menores que 1kg o 0.quantidade de gramas</h5>
+            </div>
+            <form onsubmit="return calcular(event)">
+                <div class="material">
+                    <div id="custoMaterial">
+                        <div id="sub-titulo">
+                            <h4>Valor do Kg do Filamento</h4>
+                        </div>  
+                        <div id="campos">
+                            <ion-icon name="help-buoy-outline"></ion-icon>
+                            <input type="tel" name="kgFilamento" id="kgFilamento" placeholder="Exemplo R$ = 130.00 " required>
+                        </div>
+                        <div id="sub-titulo">
+                            <h4>Valor do Frete</h4>
+                        </div>
+                        <div id="campos">
+                            <ion-icon name="cube-outline"></ion-icon>
+                            <input type="tel" name="frete" id="frete" placeholder="Exemplo R$ = 31.99" required>
+                        </div>
+                        <div id="sub-titulo">
+                            <h4>Material Gasto</h4>
+                        </div>
+                        <div id="campos">
+                            <ion-icon name="prism-outline"></ion-icon>
+                            <input type="tel" name="material" id="material" placeholder="Exemplo gr = 0.256" required>
+                        </div>
+                    </div>
+                    <div id="custoEnergia">
+                        <div id="sub-titulo">
+                            <h4>Consumo(watts da fonte) da impressora</h4>
+                        </div>  
+                        <div id="campos">
+                            <ion-icon name="flash-outline"></ion-icon>
+                            <input type="tel" name="watts" id="watts" placeholder="Exemplo 350w" required>
+                        </div>
+                        <div id="sub-titulo">
+                            <h4>Valor da energia da sua regiao</h4>
+                        </div>
+                        <div id="campos">
+                            <ion-icon name="receipt-outline"></ion-icon>
+                            <input type="tel" name="valorEnergia" id="valorEnergia" placeholder="Exemplo R$ = 0.89" required>
+                        </div>
+                        <div id="sub-titulo">
+                            <h4>Tempo de impressão em horas</h4>
+                        </div>
+                        <div id="campos">
+                            <ion-icon name="hourglass-outline"></ion-icon>
+                            <input type="tel" name="tempoImp" id="tempoImp" placeholder="Exemplo Hr/min = 1.35" required>
+                        </div>
+                    </div>
+                    <div id="custoDespesas">
+                        <div id="sub-titulo">
+                            <h4>Despesa mensal</h4>
+                        </div>  
+                        <div id="campos">
+                            <ion-icon name="storefront-outline"></ion-icon>
+                            <input type="tel" name="despesa" id="despesa" placeholder="Exemplo 3500.00" required>
+                        </div>
+                        <div id="sub-titulo">
+                            <h4>Dias do mês trabalhados</h4>
+                        </div>
+                        <div id="campos">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                            <input type="tel" name="dias" id="dias" placeholder="Exemplo 24 dias" required>
+                        </div>
+                        <div id="sub-titulo">
+                            <h4>Horas trabalhadas por semana</h4>
+                        </div>
+                        <div id="campos">
+                            <ion-icon name="alarm-outline"></ion-icon>
+                            <input type="tel" name="horas" id="horas" placeholder="Exemplo Hrs = 8" required>
+                        </div>
+                        <div id="sub-titulo">
+                            <h4>Informe a (%) de lucro</h4>
+                        </div>
+                        <div id="campos">
+                            <ion-icon name="wallet-outline"></ion-icon>
+                            <input type="tel" name="lucro" id="lucro" placeholder="Exemplo % = 40" required>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div id="btn">
+                    <input type="submit" value="Calcular Custo">
+                </div>
+               
+            </form>
+
+            <div class="res">
+                <h3>Resultado:</h3>
+                <h5 id="resultado1"></h5>
+                <h5 id="resultado2"></h5>
+                <h5 id="resultado3"></h5>
+                <h5 id="resultado4"></h5>
+                <h5 id="resultado5"></h5>
+                <h5 id="resultado6"></h5>
+            </div>    
+
+        </div>
+    </main>
+    <script src="js2/script2.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
