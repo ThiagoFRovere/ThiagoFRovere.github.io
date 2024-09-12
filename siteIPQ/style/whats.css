@@ -1,0 +1,75 @@
+/*******************************************************************************************************************/
+/*                                       CONTEUDO PRINCIPAL                                                        */  
+/*******************************************************************************************************************/
+
+main .mainContainer .content{
+    width: 100%;
+    margin-left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+main .mainContainer .content .banner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue-color);
+}
+main .mainContainer .content .banner img{
+    width: 50%;
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+main .mainContainer .content .containerIMG{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    margin: 30px;
+    margin-top: 50px;
+}
+main .mainContainer .content .containerIMG .container1 img{
+    margin-left: 50px;
+}
+
+
+/*******************************************************************************************************************/
+/*                                               MEDIA QUERIES                                                     */  
+/*******************************************************************************************************************/
+
+@media(max-width:1677px){
+
+}
+@media(max-width:1450px){
+    
+}
+@media(max-width:1350px){
+    main .mainContainer .banner{
+        width: 100%;
+        margin-left: 0%;
+    }
+    main .mainContainer .content .containerIMG{
+        margin-left: 100px;
+    }
+    main .mainContainer .content .containerIMG .cont1 img{
+        margin-left: 50px;
+        width: 200px;
+    }
+}
+
+@media(max-width:1080px){
+    main .mainContainer .content{
+        width: 100%;
+        margin-left: 0;
+    }
+    main .mainContainer .content .banner{
+        margin-top: 90px;
+    }
+    main .mainContainer .content .containerIMG{
+        margin-left: 0px;
+    }
+}

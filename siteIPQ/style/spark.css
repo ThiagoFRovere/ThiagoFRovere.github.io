@@ -1,0 +1,187 @@
+/*******************************************************************************************************************/
+/*                                       CONTEUDO PRINCIPAL                                                        */  
+/*******************************************************************************************************************/
+main .mainContainer .tutorial{
+    width: 90%;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+main .mainContainer .tutorial .banner{
+    width: 100%;
+    height: 300px;
+    background: url(../pictures/conectado.jpeg) no-repeat ;
+    background-size: cover;
+    background-position: center;
+}
+main .mainContainer .tutorial .content{
+    
+    margin-left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    
+}
+main .mainContainer .tutorial .content #old{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: 25px;
+    gap: 10px;
+
+}
+main .mainContainer .tutorial .content #old img{
+    width: 100%;
+}
+main .mainContainer .tutorial .content #old h1,
+main .mainContainer .tutorial .content #news h1{
+    font-size: 25px;
+}
+main .mainContainer .tutorial .content #news img{
+    width: 60%;
+}
+main .mainContainer .tutorial .content #news{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: 0px;
+    gap: 10px;
+
+}
+
+
+/*******************************************************************************************************************/
+/*                                               MEDIA QUERIES                                                     */  
+/*******************************************************************************************************************/
+
+
+@media(max-width:1677px){
+    main .mainContainer .tutorial .banner{
+        width: 100%;
+        height: 250px;
+        background: url(../pictures/conectado.jpeg) no-repeat ;
+        background-size: cover;
+        background-position: center;
+    }
+}
+@media(max-width:1450px){
+    main .mainContainer .tutorial{
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+        margin-top: 50px;
+        margin-left: 0;
+    }
+    
+    main .mainContainer .tutorial .content #old{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    main .mainContainer .tutorial .content #news{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;        
+    }
+}
+
+@media(max-width:1350px){
+ 
+}
+
+@media(max-width:1080px){
+    main{
+        width: 100%;
+    }
+    main .mainContainer .barraLateral{
+        display: none;  
+    }
+    main .mainContainer .conteudo {
+        width: 100%;
+        margin-left: 0%;
+        height: 100%;
+        
+    }
+    main .mainContainer .conteudo .content .banner{
+        width: 100%;
+        margin-left: 0%;
+    }
+    main .mainContainer .conteudo .content #nameRI{
+        margin-top: 50px;   
+    }
+    main .mainContainer .conteudo .content .tabela{
+        margin-top: 50px;
+    } 
+    main .mainContainer .tutorial .content .banner{
+        width: 100%;
+    }
+    main .mainContainer .tutorial{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        display: flex;
+        margin-bottom: 100px;
+    }
+    main .mainContainer .tutorial .content{
+    
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        flex-direction: column;
+        
+    }
+    main .mainContainer .tutorial .content #old{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin-left: 0%;
+        margin-top: 0px;
+        gap: 10px;
+    }
+    main .mainContainer .tutorial .content #news{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin-left: 0px;
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    main .mainContainer .tutorial .content #old img{
+        width: 100%;
+    }
+    main .mainContainer .tutorial .content #news img{
+        width: 80%;
+    }
+
+}
+
+@media(max-width:768px){
+    main .mainContainer{
+        margin-top: -250px;
+    }
+    main .mainContainer .tutorial{
+        flex-direction:column;
+        margin: 20px;
+    }
+    main .mainContainer .tutorial #old img{
+        width: 100%;
+    }
+    main .mainContainer .tutorial #news img{
+        width: 100%;
+    }
+}

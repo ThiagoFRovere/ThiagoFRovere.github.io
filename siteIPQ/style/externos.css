@@ -1,0 +1,132 @@
+/*******************************************************************************************************************/
+/*                                       CONTEUDO PRINCIPAL                                                        */  
+/*******************************************************************************************************************/
+
+main .mainContainer .content {
+    width: 100%;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main .mainContainer .content .banner{
+    width: 100%;
+    height: 300px;
+    background: url(../pictures/telefonia.jpeg) no-repeat ;
+    background-size: cover;
+    background-position: center;
+}
+main .mainContainer .content #title{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    color: var(--black-color);
+}
+main .mainContainer .content #title h1{
+    font-size: 30px;
+}
+main .mainContainer .content .table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    background-color: var(--white-color);
+    min-height: 40vh;
+
+}
+main .mainContainer .content .table .table1{
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--white-color);
+}
+main .mainContainer .content .table .table1 th{
+    padding: 5px 20px;
+    color: var(--black-color);
+    font-size: 16px;
+}
+main .mainContainer .content .table .table1 td{
+    font-size: 14px;
+    padding: 0px 5px;  
+}
+main .mainContainer .content .table .table1 #data{
+    display: flex;
+    justify-content: center;
+}
+main .mainContainer .content .table .table1 a{
+    display: flex;
+    justify-content: center;
+    color: var(--black-color);
+}
+main .mainContainer .content .table .table1 #ref{
+    padding: 5px 20px;
+    font-size: 16px;
+    color: var(--black-color);
+}
+main .mainContainer .content .table .table1 #data{
+    padding: 5px 20px;
+    font-size: 16px;
+    color: var(--black-color);
+}
+main .mainContainer .content .table .table1 a{
+    padding: 5px 20px;
+    font-size: 16px;
+    color: var(--black-color);
+}
+
+
+/*******************************************************************************************************************/
+/*                                               MEDIA QUERIES                                                     */  
+/*******************************************************************************************************************/
+@media(max-width:1677px){
+
+}
+
+@media(max-width:1450px){
+
+}
+@media(max-width:1350px){
+    main .mainContainer .barraLateral{
+        width: 250px;
+        padding-top: 70px;
+    }
+    main .mainContainer .banner{
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+@media(max-width:1080px){
+    main .mainContainer .content{
+        margin-left: 0px;
+    }
+    main .mainContainer .content .banner{
+        height: 200px;
+    }
+    main .mainContainer .content #title{
+        margin-top: 50px;   
+        font-size: 12px;
+    }
+    main .mainContainer .content .table{
+        margin-top: 20px;
+        min-height: 50vh;
+    }
+    main .mainContainer .content #title h1{
+        font-size: 20px;
+    }
+    main .mainContainer .content .table .table1 th{
+        font-size: 12px;
+    }
+    main .mainContainer .content .table .table1 #ref{
+        font-size: 12px;
+    }
+    main .mainContainer .content .table .table1 #data{
+        font-size: 12px;
+    }
+    main .mainContainer .content .table .table1 a{
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,118 @@
+/*******************************************************************************************************************/
+/*                                       CONTEUDO PRINCIPAL                                                        */  
+/*******************************************************************************************************************/
+
+
+main .mainContainer .content{
+    width: 100%;
+    margin-left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    text-align: center;
+}
+main .mainContainer .content .banner img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 57px;
+}
+main .mainContainer .content .listLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+main .mainContainer .content .listLinks .link{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+main .mainContainer .content .listLinks .link img{
+    width: 100px;
+    height: 100px;
+    
+}
+main .mainContainer .content .listLinks .list1 .link h4,
+main .mainContainer .content .listLinks .list2 .link h4{
+    font-size: 20px;
+}
+main .mainContainer .content .listLinks .list1 .link #grande,
+main .mainContainer .content .listLinks .list2 .link #grande{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+
+/*******************************************************************************************************************/
+/*                                               MEDIA QUERIES                                                     */  
+/*******************************************************************************************************************/
+
+
+@media(max-width:1677px){
+
+}
+@media(max-width:1450px){
+
+}
+@media(max-width:1350px){
+
+}
+
+@media(max-width:1080px){
+    main .mainContainer .content{
+        margin-left: 0px;
+    }
+    main .mainContainer .content .banner{
+        margin-top: 40px;
+    }
+}
+@media(max-width:768px){
+    main .mainContainer .content .listLinks .link img{
+        width: 70px;
+        height: 70px;
+        
+    }
+    main .mainContainer .content .listLinks .list1 .link h4,
+    main .mainContainer .content .listLinks .list2 .link h4{
+        font-size: 15px;
+    }
+    main .mainContainer .content .listLinks .list1 .link #grande,
+    main .mainContainer .content .listLinks .list2 .link #grande{
+        width: 70px;
+        height: 70px;
+    }
+    
+}
+@media(max-width:500px){
+    main .mainContainer .content .listLinks{
+        flex-direction: column;
+        gap: 0px;
+        align-items: center;
+        justify-content: baseline;
+    }
+    main .mainContainer .content .listLinks .link img{
+        width: 80px;
+        height: 80px;
+        
+    }
+    main .mainContainer .content .listLinks .list1 .link h4,
+    main .mainContainer .content .listLinks .list2 .link h4{
+        font-size: 15px;
+    }
+    main .mainContainer .content .listLinks .link{
+        margin-top: 10px;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    main .mainContainer .content .listLinks .list1{
+        margin-left: -50px;
+    }
+}
