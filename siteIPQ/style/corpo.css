@@ -1,0 +1,587 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --blue-color: #2562b3;
+    --grey-666-color: #666;
+    --grey-333-color: #333;
+    --grey-222-color: #222;
+    --red-color: #F60806;
+    --color-campanha: #000d5c; 
+}
+
+/*******************************************************************************************************************/
+/*                                               icone whats                                                       */  
+/*******************************************************************************************************************/
+
+header .whatsapp{
+    position:fixed;
+    width:50px;
+    height:50px;
+    bottom:30px;
+    right:10px;
+    text-align:center;
+    z-index:1000;
+}
+header .whatsapp img{   
+    width:45px;
+    height:45px;
+}
+
+/*******************************************************************************************************************/
+/*                                               Head Bar                                                          */  
+/*******************************************************************************************************************/
+
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: var(--white-color);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 0px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .logo{
+    display: flex;
+    justify-content: space-between;
+    text-align: center; 
+}
+header .logo img{
+    width: 100px;
+}
+header .logo a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--grey-222-color);
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+header .logo .descLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: baseline;
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+header .logo .descLogo h5{
+    font-size: 12px;
+    color: var(--blue-color);
+    padding-left: 5px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+header .navbar ul{
+    list-style: none;
+}
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+header .navbar ul li a{
+    font-size: 15px;
+    padding: 10px;
+    color: var(--blue-color);
+    display: block;
+    display: flex;
+    background-color: transparent;
+}
+header .navbar ul li a box-icon{
+    padding-bottom: 5px;
+}
+header .navbar ul li a:hover{
+    /*background: url(../pictures/fundo-verde.png) no-repeat ;*/
+    background-color: var(--color-campanha);
+    background-size: cover;
+    background-position: center;
+    color: var(--blue-color);
+    
+}
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: var(--white-color);
+    display: none;
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+#menu-bar{
+    display: none;
+}
+header label{
+    font-size: 20px;
+    color: var(--grey-333-color);
+    cursor: pointer;
+    display: none;
+}
+
+
+/*******************************************************************************************************************/
+/*                                               LEFT BAR                                                          */  
+/*******************************************************************************************************************/
+
+main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .mainContainer{
+    width: 100%;
+    display: flex;
+    margin-left: 0%;
+}
+main .mainContainer .sideBar{
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: var(--white-color);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 0px 0%;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    flex-direction: column;
+    z-index: 10;
+    padding-top: 70px;
+    overflow-x:  auto;
+    /*background: url(../pictures/fundo-verde.png) no-repeat ;*/
+    background-color: var(--color-campanha);
+    background-size: auto;
+    background-position: center;
+}
+main .mainContainer .sideBar .icons{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    
+}
+main .mainContainer .sideBar .icons .list1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+main .mainContainer .sideBar .icons .list1 img{
+    height: 80px;
+    width: 80px;
+    border-radius: 15px;
+}
+
+/*--------------------------------------------------*/
+main .mainContainer .sideBar .icons .list2{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-right: 90px;
+}
+main .mainContainer .sideBar .icons .list2 img{
+    height: 80px;
+    width: 80px;
+    border-radius: 15px;
+}
+main .mainContainer .sideBar .icons .list2 img:hover{
+    transform: scale(1.1);
+}
+/*--------------------------------------------------*/
+
+main .mainContainer .sideBar .icons .list1 img:hover{
+    transform: scale(1.1);
+}
+main .mainContainer .sideBar .schedule{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1px solid var(--black-color);
+    border-radius: 15px;
+}
+main .mainContainer .sideBar .schedule iframe{ 
+    font-size: 10px;
+}
+main .mainContainer .sideBar .schedule ul{
+    list-style: none;
+}
+main .mainContainer .sideBar .schedule ul li{ 
+    margin-top: 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*******************************************************************************************************************/
+/*                                       CONTEUDO PRINCIPAL                                                        */  
+/*******************************************************************************************************************/
+
+
+
+/*******************************************************************************************************************/
+/*                                               FOOTER BAR                                                        */  
+/*******************************************************************************************************************/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 8%;
+    align-items: center;
+    width: 95%;
+}
+/*****************************************/
+footer .footerContainer1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 0px;
+    background-color: var(--white-color);
+    border-top: 1px solid var(--grey-666-color);
+    width: 100%;
+    margin-left: 5px;
+    /*background: url(../pictures/fundo-verde.png) no-repeat ;*/
+    background-color: var(--white-color);
+    background-size: auto;
+    background-position: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*****************************************/
+footer .footerContainer1 .menu-cont{
+    display: flex;
+    gap: 50px;
+}
+footer .footerContainer1 .menu-cont ul{
+    gap: 15px;
+}
+footer .footerContainer1 .menu-cont ul li{
+    list-style: none;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+footer .footerContainer1 .menu-cont ul li a{
+    color: var(--black-color);
+    text-decoration: none;
+    margin: 3px;
+    font-size: 15px;
+    font-weight: 600;
+}
+footer .footerContainer1 .menu-cont ul li a:hover{
+    color: var(--blue-color);
+}
+/*****************************************/
+footer .footerContainer1 .rede-sociais{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+footer .footerContainer1 .rede-sociais ul {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+footer .footerContainer1 .rede-sociais ul li{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-left: 15px;
+}
+footer .footerContainer1 .rede-sociais ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--black-color);
+}
+footer .footerContainer1 .rede-sociais img{
+    width: 175px;
+    height: 80px;
+}
+footer .footerContainer1 .rede-sociais #logoIpq{
+    width: 200px;
+    height: 100px;
+}
+footer .footerContainer1 .rede-sociais #logoSC{
+    width: 200px;
+    height: 100px;
+}
+/*****************************************/
+footer .footerContainer2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    width: 100%;
+    /*background-color: var(--blue-color);*/
+    background-color: var(--white-color);
+}footer .footerContainer2 .copyright{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}footer .footerContainer2 a, h5{
+    text-decoration: none;
+    color: var(--black-color);
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    font-size: 9px;
+}footer .footerContainer2 h6{
+    text-decoration: none;
+    color: var(--white-color);
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    font-size: 8px;
+}footer .footerContainer2 .copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*******************************************************************************************************************/
+/*                                               MEDIA QUERIES                                                     */  
+/*******************************************************************************************************************/
+
+
+@media(max-width:1677px){
+    main .mainContainer .sideBar{
+        width: 250px;
+        padding-top: 70px;
+    }
+    main .mainContainer .sideBar .icons .list1 img{
+        height: 80px;
+        width: 80px;
+    }
+    main .mainContainer .sideBar .schedule iframe{ 
+        width: 200px;
+        height: 300px;
+    }
+
+
+    main .mainContainer .banner{
+        width: 100%;
+        margin-left: 0%;
+    }
+
+
+    footer{
+        margin-left: 250px;
+        width: 85%;
+    }
+    footer .footerContainer1{
+        margin-left: 0px;
+    }
+    footer .footerContainer1 .empresa h2{
+        font-size: 14px;
+    }
+    footer .footerContainer1 .empresa h3{
+        font-size: 12px;
+    }
+    footer .footerContainer1 .atendimento h3{
+        font-size: 13px;
+    }
+    footer .footerContainer1 .atendimento h4{
+        font-size: 12px;
+    }
+    footer .footerContainer1 .atendimento .phone h3{
+        font-size: 13px;
+    }
+    footer .footerContainer1 .atendimento .phone ul li{
+        font-size: 12px;
+    }
+    footer .footerContainer1 .menu-cont ul li a{
+        font-size: 12px;
+    }
+    footer .footerContainer1 .rede-sociais #logoIpq{
+        width: 150px;
+        height: 70px;
+    }
+    footer .footerContainer1 .rede-sociais #logoSC{
+        width: 150px;
+        height: 70px;
+    }
+}
+@media(max-width:1450px){
+    main .mainContainer .sideBar{
+        width: 250px;
+        padding-top: 70px;
+    }
+    main .mainContainer .banner{
+        width: 100%;
+        margin-left: 0%;
+    }
+    footer{
+        margin-left: 250px;
+        width: 83%;
+    }
+    footer .footerContainer1 .empresa h2{
+        font-size: 12px;
+    }
+    footer .footerContainer1 .rede-sociais #logoIpq{
+        width: 150px;
+        height: 70px;
+    }
+    footer .footerContainer1 .rede-sociais #logoSC{
+        width: 150px;
+        height: 70px;
+    }
+}
+@media(max-width:1350px){
+    main .mainContainer .sideBar{
+        width: 250px;
+        padding-top: 70px;
+    }
+    main .mainContainer .banner{
+        width: 100%;
+        margin-left: 0%;
+    }
+    footer{
+        margin-left: 250px;
+        width: 82%;
+    }
+    footer .footerContainer1 .rede-sociais #logoIpq{
+        width: 120px;
+        height: 60px;
+    }
+    footer .footerContainer1 .rede-sociais #logoSC{
+        width: 120px;
+        height: 60px;
+    }
+}
+
+@media(max-width:1080px){
+    header{
+        padding: 20px;
+    }
+    header label{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--white-color);
+        border-top: 1px solid rgba(0,0,0,0.1);
+        display: none;
+    }
+    header .navbar ul li{
+        width: 100%;
+    }
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+    header .navbar ul li ul li{
+        background: var(--white-color);
+    }
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+    main .mainContainer .sideBar{
+        display: none;  
+    }
+
+    main .mainContainer {
+        width: 100%;
+        margin-left: 0%;
+    }
+    main .mainContainer .conteudo {
+        width: 100%;
+        margin-left: 0%;
+        height: 100%;
+    }
+    
+    main .mainContainer .conteudo .banner{
+        width: 100%;
+        margin-left: 0%;
+    }
+ 
+    footer{
+        margin-left: 0%;
+        width: 100%;
+    }
+    footer .footerContainer1 .rede-sociais #logoIpq{
+        width: 90px;
+        height: 40px;
+    }
+    footer .footerContainer1 .rede-sociais #logoSC{
+        width: 90px;
+        height: 40px;
+    }
+}
+@media(max-width:710px){
+    footer .footerContainer2 .copyright{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media(max-width:600px){
+    header .logo img{
+        width: 70px;
+    }
+    footer .footerContainer1{
+        display: flex;
+        gap: 5px;
+        width: 100%;
+    }
+}
+
+
+@media(max-width:520px){
+    header{
+        padding: 5px;
+    }
+    header .logo .descLogo h5{
+        font-size: 10px;
+
+    }
+    footer{
+        margin-left: 0%;
+        width: 100%;
+        margin-left: 0px;
+    }
+    footer .footerContainer1{
+        margin-left: 0px;
+    }
+    footer .footerContainer1 .menu-cont{
+        flex-direction: column;
+        gap: 0;
+    }
+
+}
+

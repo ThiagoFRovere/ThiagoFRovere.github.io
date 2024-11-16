@@ -1,0 +1,58 @@
+/*******************************************************************************************************************/
+/*                                       CONTEUDO PRINCIPAL                                                        */  
+/*******************************************************************************************************************/
+main .mainContainer .content{
+    width: 100%;
+    margin-left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+main .mainContainer .content .galery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+footer{
+    margin-top: 200px;
+}
+/*******************************************************************************************************************/
+/*                                               MEDIA QUERIES                                                     */  
+/*******************************************************************************************************************/
+
+
+
+@media(max-width:1700px){
+    footer{
+        margin-top: 250px;
+    }
+}
+@media(max-width:1450px){
+
+}
+@media(max-width:1350px){
+
+}
+
+@media(max-width:1080px){
+    main .mainContainer .content{
+        margin-left: 0px;
+    }
+}
+@media(max-width:965px){
+   
+}
+@media(max-width:800px){
+    main .mainContainer .content .galery .photos img{
+        width: 400px;
+    }
+}
+@media(max-width:600px){
+    main .mainContainer .content .galery .photos img{
+        width: 350px;
+    }
+}

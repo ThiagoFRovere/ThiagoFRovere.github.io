@@ -1,0 +1,484 @@
+/*******************************************************************************************************************/
+/*                                      .content PRINCIPAL                                                        */  
+/*******************************************************************************************************************/
+
+@keyframes animacao {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+    75% { margin-left: -300%; }
+    95% { margin-left: -300%; }
+    100% { margin-left: -400%; }
+}
+
+
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --campanha-color: #005cb2;
+}
+
+
+main #cookiePopup {
+    margin-right: 300px;
+    width: 420px; 
+    display: flex;
+    flex-direction: column;
+    background-color: var(--campanha-color);
+    position: absolute;
+    font-size: 14px;
+    box-shadow: 0 0 32px rgba(5, 0, 31, 0.15);
+    font-family: "Poppins", sans-serif;
+    text-align: justify;
+    line-height: 10px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    transition: all 0.5s ease-in;
+    z-index: 500;
+}
+main #cookiePopup img {
+    display: block;
+    width: 400px;
+    transform: translateZ(0);
+    position: relative;
+    margin: auto;
+    padding-bottom: 20px;
+}
+main #cookiePopup p {
+    text-align: center;
+    margin: 0px 0px;
+    line-height: 1.2em;
+}
+main #cookiePopup a {
+    text-align: center;
+    margin: 5px 0px;
+    line-height: 1.5em;
+}
+main #cookiePopup button {
+    border: solid 1px var(--black-color);
+    color: var(--black-color);
+    font-size: 20px;
+    padding: 5px 10px;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0;
+}
+main #cookiePopup .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*----------------------------------------------------------------------------------*/
+
+main #cookiePopup .twoImagens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+main #cookiePopup .twoImagens img{
+    display: block;
+    width: 400px;
+    transform: translateZ(0);
+    position: relative;
+    margin: auto;
+    padding-bottom: 20px;
+}
+main #cookiePopup .twoImagens .imagem1 img{
+   height: 520px;
+}
+main #cookiePopup .twoImagens .imagem2 img{
+    height: 520px;
+ }
+/*-----------------------------------------------------------------------------------*/
+main .hide {
+    visibility: hidden;
+    bottom: 0;
+    right: 32px;
+}
+main .show {
+    visibility: visible;
+    bottom: 32px;
+    right: 20%;
+}
+
+
+main .mainContainer .content{
+    width: 100%;
+    margin-left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    
+}
+main .mainContainer .content .galery {
+    margin-top: 55px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+main .mainContainer .content  .galery .sliderAuto {
+    width: 500%;
+    animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+main .mainContainer .content  .galery .sliderAuto img {
+    width: 19.9%;
+}
+
+main .mainContainer .content .news{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+main .mainContainer .content .news .title h1{
+    margin-top: 10px;
+    font-size: 30px;
+}
+main .mainContainer .content .news .last{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px 70px;
+    margin-left: 0%;
+    margin-bottom: 5px;
+}
+main .mainContainer .content .news .last .topic{
+    width: 400px;
+    height: 500px; 
+}
+main .mainContainer .content .news .last .assunto{
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+main .mainContainer .content .news .last .topic img{
+    width: 400px;
+    height: 400px; 
+}
+
+
+/*******************************************************************************************************************/
+main .mainContainer .content .news2 .last .topic img{
+    width: 1000px;
+}
+main .mainContainer .content .news2 .last{
+    margin-bottom: 50px;
+}
+/*******************************************************************************************************************/
+main .mainContainer .content .news .last .topic h6{
+   margin-top: 5px; 
+   background-color: var(--white-color);
+}
+
+
+main .mainContainer .content .news .last img{
+    width: 400px;
+    height: 400px; 
+}
+main .mainContainer .content .news .last img:hover{
+    transform: scale(1.2);
+}
+
+main .mainContainer .content .banner-enf{
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+main .mainContainer .content .banner-enf img{
+    width: 100%;
+}
+
+main .mainContainer .content .banner-dengue{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+main .mainContainer .content .banner-dengue img{
+    width: 100%;
+}
+
+footer{
+    margin-top: 0px;
+}
+
+
+
+
+
+/*******************************************************************************************************************/
+/*                                               Resposividade                                                        */  
+/*******************************************************************************************************************/
+
+@media(max-width:1677px){
+    main .show {
+        /*----------centralizar o cookie  na pagina*/
+        /*configuração para UMA imagem*/
+        /*right: 35%;*/
+        /*configuração para DUAS imagem*/
+        right: 15%;
+    }
+    main .mainContainer .content .news .title h1{
+        margin-top: 10px;
+        font-size: 30px;
+    }
+}
+
+/*--------------------------Resolusão dos monitores pequenos do ipq------------------------------------------------*/
+/*                            1449 x  630                                                                          */
+/*******************************************************************************************************************/
+@media(max-width:1450px){
+    
+    main .show {
+        /*----------centralizar o cookie  na pagina*/
+        /*configuração para UMA imagem*/
+        /*right: 35%;*/
+        /*configuração para DUAS imagem*/
+        right: 10%;
+    }
+    main #cookiePopup {
+        margin-top: 50px;
+        width: 370px; 
+    }
+    main #cookiePopup img {
+        width: 350px;
+    }
+    main .hide {
+        visibility: hidden;
+        bottom: 0;
+        right: 5px;
+    }
+    main .show {
+        bottom: 5px;
+    }
+    main .mainContainer .content .news .title h1{
+        margin-top: 10px;
+        font-size: 30px;
+    }
+}
+
+@media(max-width:1350px){
+    main #cookiePopup {
+        width: 100%;
+        margin-top: 50px;
+        margin-right: 100px;
+        width: 370px; 
+    }
+    main .show {
+        /*----------centralizar o cookie  na pagina*/
+        /*configuração para UMA imagem*/
+        /*right: 20;*/
+        /*configuração para DUAS imagem*/
+        right: 15%;
+    }
+    main .mainContainer .content .news .title h1{
+        margin-top: 10px;
+        font-size: 30px;
+    }
+    main .mainContainer .content{
+        margin-left: 250px;
+    }
+    main .mainContainer .content  .galery {
+        margin-bottom: 0px;
+        height: 200px;
+        margin-top: 60px;
+    }
+    main .mainContainer .content .cabecario{
+        margin-top: 20px;   
+    }
+    main .mainContainer .content .news .last{
+        margin-top: 20px;
+    }
+    main .mainContainer .content .news .last img{
+        width: 400px;
+        height: 400px; 
+    }
+}
+
+
+@media(max-width:1079px){
+
+
+
+    main .hide {
+        bottom: 10px;
+        right: 0;
+    }
+    main .show {
+        right: 0;
+        bottom: 0;
+    }
+    main #cookiePopup {
+        width: 100%;
+        margin-top: 50px;
+        margin-right: 200px;
+        width: 420px; 
+    }
+    main #cookiePopup img {
+        width: 400px;
+    }
+    main .hide {
+        right: 32px;
+    }
+    /*
+    main .show {
+        /*----------centralizar o cookie  na pagina*/
+        /*configuração para UMA imagem*/
+        /*right: 10%;*/
+        /*configuração para DUAS imagem*/
+        /*right: 0%;
+        bottom: 12px;
+        right: 350px;
+    }
+    */
+    main .mainContainer .content {
+        width: 100%;
+        height: 100%;
+        margin-left: 0px;
+    }
+    main .mainContainer .content  .galery {
+        margin-top: 100px;
+    }
+    main .mainContainer .content .slide{
+        width: 100%;
+        margin-top: 100px;
+    }
+    main .mainContainer .content .cabecario{
+        margin-left: 0;   
+    }
+    main .mainContainer .content #nameRI{
+        margin-top: 25%;   
+    }
+    main .mainContainer .content .tabela{
+        margin-top: 20%;
+    }
+    main .mainContainer .content .banner-enf{
+        margin-left: 0%;
+    }
+    main .mainContainer .content .news .last{
+        margin-left: 0%;
+    }
+}
+
+@media(max-width:900px){
+    /*main .show {
+        right: 25%;
+    }*/
+    main .mainContainer .content .news .last{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+        margin-left: 0%;
+    }
+    main .mainContainer .content .news .last img{
+        width: 450px;
+        height: 450px; 
+        margin-top: 50px;
+    }
+}
+@media(max-width:710px){
+    main .show {
+        right: 5%;
+    }
+    main #cookiePopup {
+
+        margin-right: 100px;
+     
+    }
+    main .mainContainer .content .galery .sliderAuto{
+        display: none;
+    }
+    main .mainContainer .content .news{
+        margin-top: -150px;
+       
+    }
+    
+}
+@media(max-height: 700px){
+    main .show {
+        right: 5%;
+    }
+    main #cookiePopup {
+        width: 320px;
+        margin-right: 100px;
+     
+    }
+
+    main #cookiePopup img {
+        width: 300px;
+    }
+}
+
+@media(max-width: 600px) {
+    main .show {
+        right: 0%;
+    }
+    main #cookiePopup {
+        width: 100%;
+        width: 320px;
+        margin-right: 0px;
+    }
+    main #cookiePopup img {
+        width: 300px;
+    }
+    main .hide {
+      bottom: 10px;
+      right: 0;
+    }
+    main .show {
+      right: 0;
+      bottom: 0;
+    }
+
+    main .mainContainer .content .news .last{
+        margin-bottom: 150px;
+    }
+    main .mainContainer .content .banner-enf{
+        margin-top: -150px;
+        margin-bottom: 150px;
+    }
+    main .mainContainer .content .banner-dengue{
+        margin-top: -150px;
+    }
+    main .mainContainer .content .news .last .assunto{
+        padding-top: 0px;
+        margin-bottom: 0px;
+    }
+
+}
+@media(max-width:520px){
+    main .mainContainer .content .news .last img{
+        width: 320px;
+        height: 300px; 
+        margin-top: 0px;
+    }
+    main .mainContainer .content .news .last .topic{
+        width: 80%;
+    }
+    main .mainContainer .content .news .last .topic img{
+        width: 200px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    main .mainContainer .content .news .last{
+        margin-bottom: 150px;
+    }
+  
+
+}
