@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../cadastro-firebase/cadastro-firebase"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "residencial"
+	}
+}
