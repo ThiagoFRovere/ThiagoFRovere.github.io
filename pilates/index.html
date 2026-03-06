@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estúdio de Pilates Moderno | Bem-vindo</title>
+    <meta name="description" content="Estúdio de pilates moderno com instrutores certificados, aulas personalizadas e ambiente acolhedor.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-text">Pilates Studio</span>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#about" class="nav-link">Sobre</a></li>
+                    <li><a href="#services" class="nav-link">Serviços</a></li>
+                    <li><a href="#instructors" class="nav-link">Instrutores</a></li>
+                    <li><a href="#testimonials" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Transforme seu Corpo, Liberte sua Mente</h1>
+            <p class="hero-subtitle">Descubra o poder do pilates em um ambiente acolhedor e profissional</p>
+            <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Comece Agora</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663347345266/n9Givy7dL26SZ9J7WZpuMs/pilates-hero-banner-ZdKQBgx4howiC9u7M5v7zz.webp" alt="Mulher praticando pilates em reformer">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="section-title">Sobre o Estúdio</h2>
+                <p class="section-text">Bem-vindo ao nosso estúdio de pilates moderno, onde a saúde, o bem-estar e a transformação pessoal são nossa prioridade. Com mais de 10 anos de experiência, oferecemos aulas personalizadas e em grupo, adaptadas para todos os níveis de condicionamento físico.</p>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <h3>Instrutores Certificados</h3>
+                        <p>Profissionais qualificados e experientes</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <h3>Equipamento Moderno</h3>
+                        <p>Reformers e acessórios de última geração</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <h3>Ambiente Acolhedor</h3>
+                        <p>Espaço luminoso e confortável</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663347345266/n9Givy7dL26SZ9J7WZpuMs/pilates-class-group-mabRoHMtgmEhW4SiaPnw8W.webp" alt="Classe de pilates em grupo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="services-container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <p class="section-subtitle">Escolha o programa que melhor se adequa aos seus objetivos</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Aulas em Grupo</h3>
+                    <p>Aulas dinâmicas e motivadoras em pequenos grupos, criando uma comunidade de apoio e energia positiva.</p>
+                    <span class="service-price">R$ 150/mês</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👤</div>
+                    <h3>Aulas Personalizadas</h3>
+                    <p>Sessões individuais adaptadas às suas necessidades específicas e objetivos pessoais.</p>
+                    <span class="service-price">R$ 200/mês</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏃</div>
+                    <h3>Pilates Clínico</h3>
+                    <p>Programa terapêutico para reabilitação e prevenção de lesões, com acompanhamento profissional.</p>
+                    <span class="service-price">R$ 250/mês</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💪</div>
+                    <h3>Pilates + Musculação</h3>
+                    <p>Combinação perfeita de pilates com exercícios de força para resultados máximos.</p>
+                    <span class="service-price">R$ 280/mês</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructors Section -->
+    <section id="instructors" class="instructors">
+        <div class="instructors-container">
+            <h2 class="section-title">Conheça Nossos Instrutores</h2>
+            <p class="section-subtitle">Profissionais dedicados e apaixonados por pilates</p>
+            
+            <div class="instructors-grid">
+                <div class="instructor-card" data-instructor-id="1">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663347345266/n9Givy7dL26SZ9J7WZpuMs/pilates-instructor-57wHzcwVi9xJmWzVUg886K.webp" alt="Instrutora de pilates">
+                    <h3>Ana Silva</h3>
+                    <p>Certificada em Pilates Clássico e Contemporâneo</p>
+                    <span class="instructor-specialty">Especialista em Reabilitação</span>
+                    <p class="instructor-click-hint">Clique para mais detalhes</p>
+                </div>
+                <div class="instructor-card" data-instructor-id="2">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663347345266/n9Givy7dL26SZ9J7WZpuMs/pilates-instructor-57wHzcwVi9xJmWzVUg886K.webp" alt="Instrutora de pilates">
+                    <h3>Marina Costa</h3>
+                    <p>Especialista em Pilates para Gestantes</p>
+                    <span class="instructor-specialty">Preparação Pré e Pós-parto</span>
+                    <p class="instructor-click-hint">Clique para mais detalhes</p>
+                </div>
+                <div class="instructor-card" data-instructor-id="3">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663347345266/n9Givy7dL26SZ9J7WZpuMs/pilates-instructor-57wHzcwVi9xJmWzVUg886K.webp" alt="Instrutora de pilates">
+                    <h3>Carla Mendes</h3>
+                    <p>Certificada em Pilates Avançado</p>
+                    <span class="instructor-specialty">Treinamento de Performance</span>
+                    <p class="instructor-click-hint">Clique para mais detalhes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="testimonials-container">
+            <div class="testimonials-header">
+                <p class="testimonials-label">DEPOIMENTOS</p>
+                <h2 class="testimonials-title">O Que Nossos Clientes Dizem</h2>
+                <p class="testimonials-description">Histórias reais de transformação e bem-estar de pessoas que encontraram sua melhor versão através do pilates.</p>
+            </div>
+            
+            <div class="testimonials-carousel">
+                <button class="carousel-btn carousel-btn-prev" id="prevBtn" aria-label="Depoimento anterior">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="carousel-content">
+                    <div class="testimonials-wrapper" id="testimonialsWrapper">
+                        <div class="testimonial-card">
+                            <div class="testimonial-image">
+                                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663347345266/n9Givy7dL26SZ9J7WZpuMs/pilates-instructor-57wHzcwVi9xJmWzVUg886K.webp" alt="Fernanda Lima">
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="stars">★★★★★</div>
+                                <p class="testimonial-text">"Encontrei equilíbrio e força através do pilates. Além dos benefícios físicos, a comunidade aqui é incrível. Sinto-me parte de uma família!"</p>
+                                <h3 class="testimonial-name">Fernanda Lima</h3>
+                                <p class="testimonial-profession">Professora</p>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-image">
+                                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663347345266/n9Givy7dL26SZ9J7WZpuMs/pilates-instructor-57wHzcwVi9xJmWzVUg886K.webp" alt="Roberto Santos">
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="stars">★★★★★</div>
+                                <p class="testimonial-text">"Pilates mudou minha vida! Sinto-me mais forte, flexível e com muito mais energia. Os instrutores são incríveis e muito atenciosos!"</p>
+                                <h3 class="testimonial-name">Roberto Santos</h3>
+                                <p class="testimonial-profession">Empresário</p>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-image">
+                                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663347345266/n9Givy7dL26SZ9J7WZpuMs/pilates-instructor-57wHzcwVi9xJmWzVUg886K.webp" alt="Mariana Costa">
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="stars">★★★★★</div>
+                                <p class="testimonial-text">"O ambiente é perfeito, acolhedor e profissional. Após 3 meses, já sinto a diferença. Meu corpo está mais tonificado e minha postura melhorou!"</p>
+                                <h3 class="testimonial-name">Mariana Costa</h3>
+                                <p class="testimonial-profession">Arquiteta</p>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-image">
+                                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663347345266/n9Givy7dL26SZ9J7WZpuMs/pilates-instructor-57wHzcwVi9xJmWzVUg886K.webp" alt="Lucas Oliveira">
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="stars">★★★★★</div>
+                                <p class="testimonial-text">"Recomendo para todos que querem transformar o corpo e a mente. A qualidade das aulas e o atendimento são excepcionais!"</p>
+                                <h3 class="testimonial-name">Lucas Oliveira</h3>
+                                <p class="testimonial-profession">Desenvolvedor</p>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-image">
+                                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663347345266/n9Givy7dL26SZ9J7WZpuMs/pilates-instructor-57wHzcwVi9xJmWzVUg886K.webp" alt="Beatriz Silva">
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="stars">★★★★★</div>
+                                <p class="testimonial-text">"Pilates não é apenas exercício, é um estilo de vida. Aqui encontrei pessoas incríveis e instrutores que realmente se importam!"</p>
+                                <h3 class="testimonial-name">Beatriz Silva</h3>
+                                <p class="testimonial-profession">Médica</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-btn-next" id="nextBtn" aria-label="Próximo depoimento">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="section-subtitle">Agende sua aula experimental gratuita</p>
+            
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Seu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Seu Telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Enviar Mensagem</button>
+                </form>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>📍 Endereço</h3>
+                        <p>Rua das Flores, 123<br>São Paulo, SP - 01234-567</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📞 Telefone</h3>
+                        <p>(11) 98765-4321<br>(11) 3456-7890</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>⏰ Horário</h3>
+                        <p>Seg-Sex: 6h - 22h<br>Sab: 8h - 18h</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📧 Email</h3>
+                        <p>contato@pilatesstudio.com.br</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Column 1: Logo and Tagline -->
+                <div class="footer-column">
+                    <h3 class="footer-logo">Pilates Studio</h3>
+                    <p class="footer-tagline">Transformando corpos e mentes através do movimento consciente.</p>
+                </div>
+
+                <!-- Column 2: Navigation -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Navegação</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Classes</a></li>
+                        <li><a href="#instructors">Instrutores</a></li>
+                        <li><a href="#about">Benefícios</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Hours -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Horários</h4>
+                    <ul class="footer-hours">
+                        <li><span class="day">Seg-Sex:</span> 7h - 21h</li>
+                        <li><span class="day">Sábado:</span> 9h - 18h</li>
+                        <li><span class="day">Domingo:</span> 9h - 17h</li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Social Media -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Redes Sociais</h4>
+                    <div class="footer-social">
+                        <a href="https://instagram.com" class="social-icon" aria-label="Instagram" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37"></path>
+                                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com" class="social-icon" aria-label="Facebook" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a2 2 0 0 1 2-2h1z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pilates Studio. Todos os direitos reservados.</p>
+                <p>Desenvolvido por <a href="https://www.thiagof.rovere.com.br" target="_blank" class="developer-link">Thiago F. Rovere</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Instructor Modal -->
+    <div id="instructorModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Instrutor">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalName"></h2>
+                    <p id="modalTitle" class="modal-title"></p>
+                    <p id="modalSpecialty" class="modal-specialty"></p>
+                    
+                    <div class="modal-section">
+                        <h3>Sobre</h3>
+                        <p id="modalAbout"></p>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3>Formação Acadêmica</h3>
+                        <ul id="modalEducation" class="education-list"></ul>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3>Certificações</h3>
+                        <ul id="modalCertifications" class="certification-list"></ul>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3>Especialidades</h3>
+                        <ul id="modalExpertise" class="expertise-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
