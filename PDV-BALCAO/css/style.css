@@ -224,7 +224,7 @@ main {
 }
 
 .hero::before {
-  width: 400px;
+  width: 0px;
   height: 400px;
   background: radial-gradient(circle, rgba(255, 122, 26, .6), transparent 60%);
   top: -80px;
@@ -232,8 +232,8 @@ main {
 }
 
 .hero::after {
-  width: 420px;
-  height: 420px;
+  width: 0px;
+  height: 0px;
   background: radial-gradient(circle, rgba(45, 212, 191, .42), transparent 60%);
   bottom: -120px;
   right: -160px;
