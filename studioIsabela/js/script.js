@@ -557,12 +557,12 @@ prevBtn.addEventListener('click', prevSlide);
 createDots();
 
 // Auto-play (opcional - comentado por padrão)
-// let autoPlayInterval = setInterval(nextSlide, 5000);
+ let autoPlayInterval = setInterval(nextSlide, 5000);
 
 // Pausar auto-play ao hover (opcional)
-// testimonialsWrapper.addEventListener('mouseenter', () => {
-//     clearInterval(autoPlayInterval);
-// });
+ testimonialsWrapper.addEventListener('mouseenter', () => {
+     clearInterval(autoPlayInterval);
+ });
 
 // Retomar auto-play ao sair do hover (opcional)
 // testimonialsWrapper.addEventListener('mouseleave', () => {
