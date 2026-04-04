@@ -1,0 +1,739 @@
+/**
+ * Script.js - Interatividade e Animações
+ * Design Philosophy: Minimalismo Elegante com Foco em Movimento
+ * - Animações sutis e fluidas
+ * - Interações responsivas
+ * - Scroll reveal animations
+ */
+
+// ============ MENU TOGGLE ============
+
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+
+    // Animar hamburger
+    const spans = menuToggle.querySelectorAll('span');
+    spans.forEach((span, index) => {
+        if (navMenu.classList.contains('active')) {
+            if (index === 0) {
+                span.style.transform = 'rotate(45deg) translateY(10px)';
+            } else if (index === 1) {
+                span.style.opacity = '0';
+            } else if (index === 2) {
+                span.style.transform = 'rotate(-45deg) translateY(-10px)';
+            }
+        } else {
+            span.style.transform = 'none';
+            span.style.opacity = '1';
+        }
+    });
+});
+
+// Fechar menu ao clicar em um link
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        const spans = menuToggle.querySelectorAll('span');
+        spans.forEach(span => {
+            span.style.transform = 'none';
+            span.style.opacity = '1';
+        });
+    });
+});
+
+
+// ============ SCROLL REVEAL ANIMATION ============
+
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observar elementos para scroll reveal
+document.addEventListener('DOMContentLoaded', () => {
+    const revealElements = document.querySelectorAll('.service-card, .instructor-card, .testimonial-card, .feature-item');
+    revealElements.forEach(el => {
+        el.classList.add('scroll-reveal');
+        observer.observe(el);
+    });
+});
+
+// ============ FORM SUBMISSION ============
+
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Obter valores do formulário
+        const formData = new FormData(contactForm);
+        const name = contactForm.querySelector('input[type="text"]').value;
+        const email = contactForm.querySelector('input[type="email"]').value;
+        const phone = contactForm.querySelector('input[type="tel"]').value;
+        const message = contactForm.querySelector('textarea').value;
+
+        // Simular envio
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+
+        submitButton.textContent = 'Enviando...';
+        submitButton.disabled = true;
+
+        // Simular delay de envio
+        setTimeout(() => {
+            submitButton.textContent = 'Mensagem Enviada!';
+            submitButton.style.background = '#27AE60';
+
+            // Resetar formulário
+            contactForm.reset();
+
+            // Voltar ao estado original após 3 segundos
+            setTimeout(() => {
+                submitButton.textContent = originalText;
+                submitButton.style.background = '';
+                submitButton.disabled = false;
+            }, 3000);
+        }, 1500);
+
+        console.log('Formulário enviado:', { name, email, phone, message });
+    });
+}
+
+// ============ SMOOTH SCROLL PARA SEÇÕES ============
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && document.querySelector(href)) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            const targetPosition = target.offsetTop - headerHeight;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// ============ PARALLAX EFFECT ============
+
+let ticking = false;
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            applyParallax();
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+
+function applyParallax() {
+    const scrolled = window.pageYOffset;
+    const heroImages = document.querySelectorAll('.hero-image img, .about-image img');
+
+    heroImages.forEach(img => {
+        const rect = img.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            const yPos = scrolled * 0.5;
+            img.style.transform = `translateY(${yPos * 0.1}px)`;
+        }
+    });
+}
+
+// ============ COUNTER ANIMATION ============
+
+function animateCounter(element, target, duration = 2000) {
+    let current = 0;
+    const increment = target / (duration / 16);
+
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current);
+        }
+    }, 16);
+}
+
+// ============ ACTIVE NAV LINK ============
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    const sections = document.querySelectorAll('section');
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        const headerHeight = document.querySelector('.header').offsetHeight;
+
+        if (pageYOffset >= sectionTop - headerHeight - 100) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+            link.style.color = 'var(--primary-color)';
+        } else {
+            link.style.color = '';
+        }
+    });
+});
+
+// ============ HEADER SHADOW ON SCROLL ============
+
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    if (window.pageYOffset > 50) {
+        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+    } else {
+        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+    }
+});
+
+// ============ RIPPLE EFFECT NO BOTÃO ============
+
+function createRipple(event) {
+    const button = event.currentTarget;
+    const ripple = document.createElement('span');
+
+    const rect = button.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    const x = event.clientX - rect.left - size / 2;
+    const y = event.clientY - rect.top - size / 2;
+
+    ripple.style.width = ripple.style.height = size + 'px';
+    ripple.style.left = x + 'px';
+    ripple.style.top = y + 'px';
+    ripple.classList.add('ripple');
+
+    button.appendChild(ripple);
+
+    setTimeout(() => {
+        ripple.remove();
+    }, 600);
+}
+
+// Adicionar efeito ripple aos botões
+const buttons = document.querySelectorAll('.cta-button');
+buttons.forEach(button => {
+    button.addEventListener('click', createRipple);
+});
+
+// ============ LAZY LOADING IMAGES ============
+
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src || img.src;
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+    });
+}
+
+// ============ KEYBOARD NAVIGATION ============
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        const spans = menuToggle.querySelectorAll('span');
+        spans.forEach(span => {
+            span.style.transform = 'none';
+            span.style.opacity = '1';
+        });
+    }
+});
+
+// ============ FOCUS VISIBLE ============
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-nav');
+    }
+});
+
+document.addEventListener('mousedown', () => {
+    document.body.classList.remove('keyboard-nav');
+});
+
+// ============ UTILITY: ADD RIPPLE EFFECT CSS ============
+
+const style = document.createElement('style');
+style.textContent = `
+    .cta-button {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.6);
+        transform: scale(0);
+        animation: ripple-animation 0.6s ease-out;
+        pointer-events: none;
+    }
+    
+    @keyframes ripple-animation {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+    
+    .keyboard-nav *:focus {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
+    }
+`;
+document.head.appendChild(style);
+
+// ============ PAGE LOAD ANIMATION ============
+
+window.addEventListener('load', () => {
+    document.body.style.opacity = '1';
+});
+
+// Inicializar com opacidade 0
+document.body.style.opacity = '0';
+document.body.style.transition = 'opacity 0.5s ease-in';
+
+// ============ PREFERS REDUCED MOTION ============
+
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (prefersReducedMotion) {
+    document.documentElement.style.scrollBehavior = 'auto';
+}
+
+// ============ CONSOLE LOG ============
+
+console.log('%c🧘 Bem-vindo ao Estúdio de Pilates Moderno', 'font-size: 20px; color: #E8756B; font-weight: bold;');
+console.log('%cDesign Philosophy: Minimalismo Elegante com Foco em Movimento', 'font-size: 14px; color: #2C3E50;');
+
+
+// ============ INSTRUCTOR MODAL ============
+
+// Dados dos instrutores com formações e certificações
+const instructorsData = {
+    1: {
+        name: 'Ana Silva',
+        title: 'Certificada em Pilates Clássico e Contemporâneo',
+        specialty: 'Especialista em Reabilitação',
+        image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663347345266/n9Givy7dL26SZ9J7WZpuMs/pilates-instructor-57wHzcwVi9xJmWzVUg886K.webp',
+        about: 'Ana é uma profissional dedicada com mais de 8 anos de experiência em pilates. Especializada em reabilitação de lesões e trabalho postural, ela combina técnicas clássicas com abordagens contemporâneas para oferecer aulas personalizadas e eficazes.',
+        education: [
+            'Bacharel em Educação Física - Universidade Federal de São Paulo',
+            'Especialização em Pilates Clássico - Instituto Pilates Brasil',
+            'Especialização em Pilates Contemporâneo - STOTT Pilates'
+        ],
+        certifications: [
+            'Certificação Pilates Clássico - FPPA (2015)',
+            'Certificação Pilates Contemporâneo - STOTT (2017)',
+            'Certificação em Reabilitação e Terapia - ACSM (2018)',
+            'Certificação em Pilates para Idosos - IBRAPE (2020)'
+        ],
+        expertise: [
+            'Pilates Clássico e Contemporâneo',
+            'Reabilitação de Lesões Musculares',
+            'Correção Postural',
+            'Pilates para Idosos',
+            'Aulas Personalizadas'
+        ]
+    },
+    2: {
+        name: 'Marina Costa',
+        title: 'Especialista em Pilates para Gestantes',
+        specialty: 'Preparação Pré e Pós-parto',
+        image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663347345266/n9Givy7dL26SZ9J7WZpuMs/pilates-instructor-57wHzcwVi9xJmWzVUg886K.webp',
+        about: 'Marina é especialista em pilates para gestantes e trabalho pós-parto. Com 6 anos de experiência, ela ajuda mulheres a manter a saúde e o bem-estar durante a gravidez e na recuperação pós-parto, com segurança e conforto.',
+        education: [
+            'Bacharel em Educação Física - Universidade Estadual de São Paulo',
+            'Especialização em Pilates para Gestantes - Instituto Pilates Brasil',
+            'Especialização em Pós-parto - APTA (American Physical Therapy Association)'
+        ],
+        certifications: [
+            'Certificação Pilates para Gestantes - FPPA (2017)',
+            'Certificação em Saúde da Mulher - IBRAPE (2018)',
+            'Certificação em Pós-parto - APTA (2019)',
+            'Certificação em Pilates Avançado - STOTT (2020)'
+        ],
+        expertise: [
+            'Pilates para Gestantes',
+            'Recuperação Pós-parto',
+            'Fortalecimento do Assoalho Pélvico',
+            'Preparação para o Parto',
+            'Acompanhamento Materno-infantil'
+        ]
+    },
+    3: {
+        name: 'Carla Mendes',
+        title: 'Certificada em Pilates Avançado',
+        specialty: 'Treinamento de Performance',
+        image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663347345266/n9Givy7dL26SZ9J7WZpuMs/pilates-instructor-57wHzcwVi9xJmWzVUg886K.webp',
+        about: 'Carla é uma instrutora apaixonada por pilates e performance. Com 7 anos de experiência, ela trabalha com atletas e pessoas que buscam melhorar seu desempenho físico, combinando pilates com treinamento funcional.',
+        education: [
+            'Bacharel em Educação Física - Universidade de São Paulo',
+            'Especialização em Pilates Avançado - STOTT Pilates',
+            'Especialização em Treinamento Funcional - CREF'
+        ],
+        certifications: [
+            'Certificação Pilates Avançado - STOTT (2016)',
+            'Certificação em Treinamento Funcional - CREF (2017)',
+            'Certificação em Pilates para Atletas - FPPA (2019)',
+            'Certificação em Pilates Clínico - APTA (2020)'
+        ],
+        expertise: [
+            'Pilates Avançado',
+            'Treinamento de Performance',
+            'Pilates para Atletas',
+            'Treinamento Funcional',
+            'Aumento de Força e Resistência'
+        ]
+    }
+};
+
+// Elementos do modal
+const modal = document.getElementById('instructorModal');
+const modalClose = document.getElementById('modalClose');
+const modalOverlay = document.querySelector('.modal-overlay');
+const instructorCards = document.querySelectorAll('.instructor-card');
+
+// Função para abrir o modal
+function openInstructorModal(instructorId) {
+    const data = instructorsData[instructorId];
+
+    if (!data) return;
+
+    // Preencher dados do modal
+    document.getElementById('modalImage').src = data.image;
+    document.getElementById('modalImage').alt = data.name;
+    document.getElementById('modalName').textContent = data.name;
+    document.getElementById('modalTitle').textContent = data.title;
+    document.getElementById('modalSpecialty').textContent = data.specialty;
+    document.getElementById('modalAbout').textContent = data.about;
+
+    // Preencher formação acadêmica
+    const educationList = document.getElementById('modalEducation');
+    educationList.innerHTML = data.education.map(item => `<li>${item}</li>`).join('');
+
+    // Preencher certificações
+    const certificationList = document.getElementById('modalCertifications');
+    certificationList.innerHTML = data.certifications.map(item => `<li>${item}</li>`).join('');
+
+    // Preencher especialidades
+    const expertiseList = document.getElementById('modalExpertise');
+    expertiseList.innerHTML = data.expertise.map(item => `<li>${item}</li>`).join('');
+
+    // Mostrar modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Função para fechar o modal
+function closeInstructorModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Event listeners para abrir modal
+instructorCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const instructorId = card.getAttribute('data-instructor-id');
+        openInstructorModal(instructorId);
+    });
+});
+
+// Event listeners para fechar modal
+modalClose.addEventListener('click', closeInstructorModal);
+
+modalOverlay.addEventListener('click', closeInstructorModal);
+
+// Fechar modal ao pressionar ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeInstructorModal();
+    }
+});
+
+// Prevenir fechamento ao clicar no conteúdo do modal
+document.querySelector('.modal-content').addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+
+// ============ TESTIMONIALS CAROUSEL ============
+
+const testimonialsWrapper = document.getElementById('testimonialsWrapper');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const carouselDotsContainer = document.getElementById('carouselDots');
+
+// Número total de depoimentos
+const totalTestimonials = document.querySelectorAll('.testimonial-card').length;
+let currentSlide = 0;
+
+// Criar dots dinamicamente
+function createDots() {
+    for (let i = 0; i < totalTestimonials; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot';
+        if (i === 0) dot.classList.add('active');
+        dot.setAttribute('aria-label', `Ir para depoimento ${i + 1}`);
+        dot.addEventListener('click', () => goToSlide(i));
+        carouselDotsContainer.appendChild(dot);
+    }
+}
+
+// Função para atualizar a posição do carrossel
+function updateCarousel() {
+    const offset = -currentSlide * 100;
+    testimonialsWrapper.style.transform = `translateX(${offset}%)`;
+
+    // Atualizar dots
+    const dots = document.querySelectorAll('.carousel-dot');
+    dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+// Função para ir para um slide específico
+function goToSlide(slideIndex) {
+    currentSlide = slideIndex;
+    updateCarousel();
+}
+
+// Função para próximo slide
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalTestimonials;
+    updateCarousel();
+}
+
+// Função para slide anterior
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalTestimonials) % totalTestimonials;
+    updateCarousel();
+}
+
+// Event listeners para botões
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+
+// Inicializar dots
+createDots();
+
+// Auto-play (opcional - comentado por padrão)
+ let autoPlayInterval = setInterval(nextSlide, 5000);
+
+// Pausar auto-play ao hover (opcional)
+ testimonialsWrapper.addEventListener('mouseenter', () => {
+     clearInterval(autoPlayInterval);
+ });
+
+// Retomar auto-play ao sair do hover (opcional)
+// testimonialsWrapper.addEventListener('mouseleave', () => {
+//     autoPlayInterval = setInterval(nextSlide, 5000);
+// });
+
+// Suporte a teclado (setas)
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') prevSlide();
+    if (e.key === 'ArrowRight') nextSlide();
+});
+
+
+// ============ SWIPER CAROUSEL ============
+// ====================================================
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+
+// whatsapp form submission
+const leadForm = document.getElementById("leadForm");
+const ctaSuccess = document.getElementById("ctaSuccess");
+
+leadForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const nome = document.getElementById("nome").value.trim();
+    const whatsapp = document.getElementById("whatsapp").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
+
+    let texto = "Olá! Tenho interesse em conhecer mais sobre o estúdio.%0A%0A";
+    if (nome) texto += "*Nome:* " + encodeURIComponent(nome) + "%0A";
+    if (whatsapp) texto += "*WhatsApp:* " + encodeURIComponent(whatsapp) + "%0A";
+    if (mensagem) texto += "%0A*Mensagem:* " + encodeURIComponent(mensagem);
+
+    // Troque pelo seu número com DDI/DDD, exemplo: 5548999999999
+    const numeroWhatsApp = "48988219717";
+    const url = "https://wa.me/" + 48988219717 + "?text=" + texto;
+
+    window.open(url, "_blank");
+    ctaSuccess.style.display = "block";
+});
+
+
+// --------------------------------------------------------------------------------
+
+const sr = ScrollReveal({ reset: true });
+
+sr.reveal('.sr1', {
+    duration: 1000,
+    origin: 'left',
+    distance: '100px'
+});
+
+sr.reveal('.sr2', {
+    duration: 1000,
+    origin: 'top',
+    distance: '100px',
+    delay: 300
+});
+
+sr.reveal('.sr3', {
+    duration: 1000,
+    origin: 'right',
+    distance: '1000px',
+    delay: 500
+});
+
+// sobre o estúdio
+sr.reveal('.sr11', {
+    duration: 1000,
+    origin: 'left',
+    distance: '600px'
+});
+sr.reveal('.sr111', {
+    duration: 1000,
+    origin: 'left',
+    distance: '400px'
+});
+sr.reveal('.sr12', {
+    duration: 1000,
+    origin: 'left',
+    distance: '800px'
+});
+sr.reveal('.sr122', {
+    duration: 1000,
+    origin: 'left',
+    distance: '600px'
+});
+sr.reveal('.sr13', {
+    duration: 1000,
+    origin: 'left',
+    distance: '1000px'
+});
+sr.reveal('.sr133', {
+    duration: 1000,
+    origin: 'left',
+    distance: '800px'
+});
+sr.reveal('.sr20', {
+    duration: 1000,
+    origin: 'right',
+    distance: '1000px',
+    delay: 500
+});
+sr.reveal('.sr21', {
+    duration: 1000,
+    origin: 'right',
+    distance: '1000px',
+    delay: 500
+});
+sr.reveal('.sr22', {
+    duration: 1000,
+    origin: 'right',
+    distance: '1000px',
+    delay: 500
+});
+sr.reveal('.srtop', {
+    duration: 1000,
+    origin: 'top',
+    distance: '1000px',
+    delay: 500
+});
+
+
+
+
+// ScrollReveal().reveal('.anim-mail', {
+//     origin: 'left',
+//     distance: '50px',
+//     duration: 1000,
+//     delay: 300,
+//     opacity: 0,
+//     scale: 0.9,
+//     easing: 'cubic-bezier(0.5, 0, 0, 1)',
+//     reset: false
+// });
+
+
+
+
+function updateClock() {
+    const now = new Date();
+
+    const seconds = now.getSeconds();
+    const minutes = now.getMinutes();
+    const hours = now.getHours();
+
+    const secDeg = seconds * 6;
+    const minDeg = minutes * 6 + seconds * 0.1;
+    const hourDeg = hours * 30 + minutes * 0.5;
+
+    document.querySelector('.second').style.transform =
+        `translateX(-50%) rotate(${secDeg}deg)`;
+
+    document.querySelector('.minute').style.transform =
+        `translateX(-50%) rotate(${minDeg}deg)`;
+
+    document.querySelector('.hour').style.transform =
+        `translateX(-50%) rotate(${hourDeg}deg)`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
