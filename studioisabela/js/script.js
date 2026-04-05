@@ -419,7 +419,7 @@ const instructorsData = {
         title: 'Graduado em Administração',
         specialty: 'Administração de Empresas',
         image: './img/perfil/felipe.jpeg',
-        about: 'Sócio e proprietário do estúdio Isabela Passos.',
+        about: 'Felipe Ferreira Rovere é sócio e proprietário do Estúdio Isabela Passos. Graduado em administração de empresas  e especializado em gestão em saúde. Seu trabalho é fundamental para o planejamento e gestão do estúdio de fisioterapia e pilates.',
         education: [
             'Graduado em Administração pela faculdade FEAN.'
         ],
