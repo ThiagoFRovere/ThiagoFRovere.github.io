@@ -19,7 +19,9 @@
     --border-color: #E5E5E5;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-html{
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -28,129 +30,9 @@ body {
     color: var(--dark-text);
     background-color: var(--white);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
-/* ============ HEADER & NAVIGATION ============ */
 
-.header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    z-index: 1000;
-    /* animation: slideDown 0.5s ease-out; */
-    transform: none;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.navbar {
-    padding: 1rem 0;
-    
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    display: flex;
-    align-items: center;
-}
-
-.logo-text-container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-}
-
-.logo-text {
-    background: linear-gradient(to right, #B465C0 20%, #31A9DD 50%, #8EC158 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-family: 'Playfair Display', serif;
-    font-size: 17px;
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    background: none;
-    border: none;
-    cursor: pointer;
-    gap: 5px;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 2px;
-    background: var(--primary-color);
-    transition: var(--transition);
-    border-radius: 2px;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: 500;
-    font-size: 0.95rem;
-    position: relative;
-    transition: var(--transition);
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--secondary-color);
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
 
 /* ----------------------------------------------------------------------------------------- */
 /* ---------------------------         HERO SECTION     ------------------------------------ */
@@ -209,7 +91,7 @@ body {
     padding: 12px 25px;
     border-radius: 30px;
     border: none;
-    background: var(--primary-color);
+    background: var(--azul);
     font-weight: 800;
     color: #fff;
     cursor: pointer;
@@ -523,6 +405,25 @@ section {
     font-size: 3rem;
     margin-bottom: 1rem;
     display: block;
+}
+
+.service-card .service-icon img {
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card.active .service-icon img {
+    animation: rotateIn 1.2s ease-out forwards;
+}
+
+@keyframes rotateIn {
+    from {
+        transform: rotate(-360deg) scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+    }
 }
 .service-card ul{
     list-style: none;
@@ -932,7 +833,7 @@ section {
 .cta-small {
     font-size: .72rem;
     color: #000;
-    margin-top: 4px;
+    margin-top: 25px;
 }
 
 .cta-success {
@@ -1152,7 +1053,7 @@ section {
 }
 
 .cta-button2 {
-    background: var(--primary-color);
+    background: var(--azul);
     width: 50%;
     color: var(--white);
     border: none;
@@ -1192,10 +1093,10 @@ section {
 .reveal-bottom { transform: translateY(120px); }
 .reveal-top { transform: translateY(-120px); }
 .reveal-left { transform: translateX(-150px); }
-.reveal-right { transform: translateX(150px); }
+.reveal-right { transform: translateX(50px); }
 
 /* variações mais fortes */
-.reveal-right-strong { transform: translateX(250px); }
+.reveal-right-strong { transform: translateX(100px); }
 
 
 /* ----------------------------------------------------------------------------------------- */
@@ -1318,16 +1219,16 @@ section {
 
 .footer-bottom {
     text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+
 }
 
 .footer-bottom p {
     color: #a0a0a0;
-    font-size: 0.9rem;
+    font-size: 12px;
+    padding: 0;
     margin: 0;
 }
 
@@ -1340,7 +1241,7 @@ section {
 
 .developer-link:hover {
     text-decoration: underline;
-    color: #ff9999;
+    color: var(--light-bg);
 }
 
 /* ============ SCROLL ANIMATIONS ============ */
@@ -1690,35 +1591,7 @@ section {
 /* ----------------------------------------------------------------------------------------- */
 
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background-color: var(--white);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 2rem 0;
-        gap: 0;
-    }
-    .nav-menu.active {
-        left: 0;
-    }
-    .nav-link {
-        display: block;
-        padding: 1rem;
-    }
-    .nav-link::after {
-        display: none;
-    }
-    .nav-link:hover {
-        background: var(--light-bg);
-    }
+   
     /* ============== HERO ANIMATIONS ============ */
     .hero {
         grid-template-columns: 1fr;
@@ -1871,7 +1744,9 @@ section {
     }
     .footer-bottom {
         padding-top: 1.5rem;
+
     }
+    
     /* =============== MODAL ANIMATIONS =========== */
     .modal-body {
         grid-template-columns: 1fr;
@@ -2020,7 +1895,7 @@ section {
         height: 36px;
     }
     .footer-bottom p {
-        font-size: 0.85rem;
+        font-size: 10px;
     }
 
 

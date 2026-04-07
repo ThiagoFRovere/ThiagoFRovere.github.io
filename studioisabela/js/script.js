@@ -358,7 +358,7 @@ if (prefersReducedMotion) {
 
 // ============ CONSOLE LOG ============
 
-console.log('%c🧘 Bem-vindo ao Estúdio de Pilates Moderno', 'font-size: 20px; color: #E8756B; font-weight: bold;');
+console.log('%c🧘 Bem-vindo ao Estúdio de Pilates e Fisioterapia Isabela Passos', 'font-size: 20px; color: #E8756B; font-weight: bold;');
 console.log('%cDesign Philosophy: Minimalismo Elegante com Foco em Movimento', 'font-size: 14px; color: #2C3E50;');
 
 
@@ -621,8 +621,8 @@ leadForm.addEventListener("submit", function (e) {
     if (mensagem) texto += "%0A*Mensagem:* " + encodeURIComponent(mensagem);
 
     // Troque pelo seu número com DDI/DDD, exemplo: 5548999999999
-    const numeroWhatsApp = "48988219717";
-    const url = "https://wa.me/" + 48988219717 + "?text=" + texto;
+    const numeroWhatsApp = "48988409816";
+    const url = "https://wa.me/" + 48988409816 + "?text=" + texto;
 
     window.open(url, "_blank");
     ctaSuccess.style.display = "block";
@@ -741,18 +741,19 @@ function updateClock() {
     const minDeg = minutes * 6 + seconds * 0.1;
     const hourDeg = hours * 30 + minutes * 0.5;
 
-    document.querySelector('.second').style.transform =
-        `translateX(-50%) rotate(${secDeg}deg)`;
+    const secondHand = document.querySelector('.second');
+    const minuteHand = document.querySelector('.minute');
+    const hourHand = document.querySelector('.hour');
 
-    document.querySelector('.minute').style.transform =
-        `translateX(-50%) rotate(${minDeg}deg)`;
-
-    document.querySelector('.hour').style.transform =
-        `translateX(-50%) rotate(${hourDeg}deg)`;
+    if (secondHand) secondHand.style.transform = `translateX(-50%) rotate(${secDeg}deg)`;
+    if (minuteHand) minuteHand.style.transform = `translateX(-50%) rotate(${minDeg}deg)`;
+    if (hourHand) hourHand.style.transform = `translateX(-50%) rotate(${hourDeg}deg)`;
 }
 
-setInterval(updateClock, 1000);
-updateClock();
+if (document.querySelector('.second')) {
+    setInterval(updateClock, 1000);
+    updateClock();
+}
 
 
 
