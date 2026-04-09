@@ -1,0 +1,74 @@
+  .modalteste {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      margin-left: 20%;
+      border-radius: 10px;
+  }
+
+  .modalteste-conteudo {
+      display: block;
+      margin: auto;
+      max-width: 80%;
+      margin-top: 50px;
+      border-radius: 10px;
+  }
+
+  .fecharteste {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+  }
+  .linkmodalteste{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+    .linkmodalteste a{
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+    }
+
+
+
+
+  .modalteste2 {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      margin-left: 20%;
+      border-radius: 10px;
+  }
+
+  .modalteste2-conteudo {
+      display: block;
+      margin: auto;
+      max-width: 60%;
+      margin-top: 50px;
+      border-radius: 10px;
+  }
+
+  .fecharteste2 {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+  }
