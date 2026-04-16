@@ -40,7 +40,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url('/img/banner/banner.png');
+    background-image: url('./img/banner/banner.png');
     background-repeat: no-repeat;
 }
 
