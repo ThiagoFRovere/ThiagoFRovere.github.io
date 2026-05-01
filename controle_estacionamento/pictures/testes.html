@@ -1,0 +1,93 @@
+1. Configurar o Upload da Foto
+Adicione um campo de entrada do tipo file para o usuário selecionar a foto.
+
+<div style="display: flex; align-items: center; gap: 10px;">
+    <label for="swal-input-foto" style="margin-bottom: 0; width: 70px; text-align: right;">Foto:</label>
+    <input id="swal-input-foto" type="file" accept="image/*" style="flex: 1; margin: 0;">
+</div>
+
+
+2. Adicionar o Script para Enviar a Foto ao Firebase Storage
+No JavaScript, faça o upload da foto para o Firebase Storage e, em seguida, salve o link da foto junto com os dados no Firestore.
+
+async function saveDataWithPhoto() {
+    const nome = document.getElementById("swal-input-nome").value;
+    const setor = document.getElementById("swal-input-setor").value;
+    const ramal = document.getElementById("swal-input-ramal").value;
+    const carro = document.getElementById("swal-input-carro").value;
+    const cor = document.getElementById("swal-input-cor").value;
+    const placa = document.getElementById("swal-input-placa").value;
+    const fotoFile = document.getElementById("swal-input-foto").files[0]; // Obtem o arquivo da foto
+
+    if (!fotoFile) {
+        alert("Por favor, selecione uma foto.");
+        return;
+    }
+
+    try {
+        // 1. Fazer upload da foto para o Firebase Storage
+        const storageRef = firebase.storage().ref();
+        const fileRef = storageRef.child(`fotos/${placa}_${Date.now()}`); // Nome único para a foto
+        const snapshot = await fileRef.put(fotoFile);
+        const photoURL = await snapshot.ref.getDownloadURL();
+
+        // 2. Salvar os dados no Firestore
+        const firestore = firebase.firestore();
+        await firestore.collection("carros").add({
+            nome,
+            setor,
+            ramal,
+            carro,
+            cor,
+            placa,
+            fotoURL, // Salva o URL da foto no banco
+        });
+
+        alert("Dados salvos com sucesso!");
+    } catch (error) {
+        console.error("Erro ao salvar os dados: ", error);
+        alert("Erro ao salvar os dados. Por favor, tente novamente.");
+    }
+}
+
+3. Chamando a Função de Salvamento
+Adicione um botão para acionar a função saveDataWithPhoto:
+
+<button onclick="saveDataWithPhoto()">Salvar Dados</button>
+
+4. Configuração Necessária no Firebase
+Firebase Storage:
+
+Habilite o Firebase Storage no Console do Firebase.
+Configure as regras para permitir o upload (por exemplo, para usuários autenticados):
+
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+
+Firestore:
+
+    2. Configure uma coleção chamada carros para armazenar os dados.
+
+    5. Dados Salvos
+Após o upload:
+
+A foto será salva no Firebase Storage.
+O URL da foto será salvo no Firestore junto com os dados do carro.
+Exemplo do Documento no Firestore
+
+{
+    "nome": "João Silva",
+    "setor": "Financeiro",
+    "ramal": "1234",
+    "carro": "Honda Civic",
+    "cor": "Preto",
+    "placa": "ABC-1234",
+    "fotoURL": "https://firebasestorage.googleapis.com/v0/b/seu-projeto.appspot.com/o/fotos%2FABC-1234_1670974800000"
+  }
+  

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Estacionamento</title>
+    <link rel="stylesheet" href="../css/tabelaVeiculos.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+<header>
+    <div class="footer">
+        <div id="sidebar" class="sidebar">
+            <div class="logo">
+                <a  href=""><img src="../pictures/logo3.png" alt="suaLogoAqui"></a>      
+                <div class="descLogo">
+                    <h5>NOME DA INSTITUIÇÃO</h5>
+                    <h5>IMFORMAÇÕES EXTRAS</h5>                    
+                </div> 
+            </div>
+        
+            <input type="checkbox" id="menu-bar">
+            <label for="menu-bar"><img src="../pictures/menu-regular-24.png" alt="menu-bar"></label> 
+            <nav class="navbar">
+                <ul>
+                    <li id="btn-pesquisar">PESQUISAR PLACA</li>
+                    <li id="btn-pesquisarCarro">PESQUISAR CARRO</li>
+                    <li id="btn-novo-cadastro">NOVO CADASTRO</li>
+                    <li id="btn-alterar-cadastro">ALTERAR CADASTRO</li>
+                    <li id="btn-solicitar-exclusao" onclick="abrirModalSolicitacao()">SOLICITAR EXCLUSÃO</li>
+                    <li id="btn-sair">SAIR<img src="../pictures/door-open-solid-24.png" alt="btn-sair"></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    
+
+    <div class="footerDEV">
+        <div class="copyright">
+            <h5>Copyright ©2024. Todos os direitos reservados.</h5>
+            <h5>Nome da Instituição</h5>
+        </div>
+        <div class="meusDados">
+            <!-- <h6>Copyright ©2024. Todos os direitos reservados.</h6> -->
+            <h6>Desenvolvido por  <a href="http://www.thiagofrovere.com.br" target="_blank"> <span> Thiago F. Rovere </span></a></h6>
+        </div>
+    </div>
+    </div>
+</header>  
+
+
+<main id="main">
+    <section class="container-table" >
+        <section class="table">
+            <h4>Veículos Cadastrados</h4>
+            <table border="1" id="data-table">
+                <thead>
+                    <tr>
+                        <th id="thNome">Nome</th>
+                        <th id="thSetor">Setor</th>
+                        <th id="thRamal">Ramal</th>
+                        <th id="thCarro">Veículo</th>
+                        <th id="thModelo">Modelo</th>
+                        <th id="thCor">Cor</th>
+                        <th id="thPlaca">Placa</th>
+                    </tr>
+                </thead>
+                <tbody id="table-Car">
+                                
+                </tbody>
+            </table>
+        </section>
+    </section>
+
+</main>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+        <script src="../js/scriptUser.js"></script>
+        <script src="../js/authGuard.js" defer></script>
+        <script src="../js/sidebar.js"></script>
+        <script src="../js/cookie.js"></script>
+        <script src="../js/logout.js"></script>
+        <script src="../js/tabelaPlacasUser.js"></script>
+</body>
+</html>
