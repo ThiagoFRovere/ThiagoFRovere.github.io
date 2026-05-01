@@ -1,0 +1,716 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1020">
+    <meta name="description"
+        content="Portfólio de Thiago Ferreira Rôvere, desenvolvedor web full stack.">
+    <title>Thiago Ferreira Rôvere | Portfólio Full Stack</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="scroll-progress" aria-hidden="true">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+    <div class="fx-bg" aria-hidden="true">
+        <span class="fx-blob one"></span>
+        <span class="fx-blob two"></span>
+        <span class="fx-blob three"></span>
+    </div>
+    <div class="cursor-spotlight" id="cursorSpotlight" aria-hidden="true"></div>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="#inicio" aria-label="Ir para o ini­cio">
+                    <div class="brand-mark">TR</div>
+                    <div class="brand-copy">
+                        <strong>Thiago Ferreira Rôvere</strong>
+                        <span>Desenvolvedor Full Stack  • Automação • Infraestrutura</span>
+                    </div>
+                </a>
+
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navWrap"
+                    aria-label="Abrir menu">
+                    <span></span>
+                </button>
+
+                <div class="nav-wrap" id="navWrap">
+                    <nav aria-label="Navegação principal">
+                        <ul class="nav-links">
+                            <li><a href="#inicio">Início</a></li>
+                            <li><a href="#perfil">Perfil</a></li>
+                            <li><a href="#competencias">Competências</a></li>
+                            <li><a href="#trajetoria">Trajetória</a></li>
+                            <li><a href="#projetos">Projetos</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </nav>
+                    <div class="lang-switch" aria-label="Idiomas">
+                        <a href="./index.html" aria-label="Versão em português">
+                            <img src="./pictures/BRA.png" alt="Bandeira do Brasil">
+                        </a>
+                        <a href="./index_english.html" aria-label="English version">
+                            <img src="./pictures/EUA.png" alt="United States flag">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero" id="inicio">
+                <div class="container hero-grid">
+                    <article class="hero-copy reveal">
+                        <span class="hero-copy-glow" aria-hidden="true"></span>
+                        <div class="eyebrow">Desenvolvimento full stack, automação e infraestrutura</div>
+                        <h1>Construo soluções digitais com visão de <span>produto, operação e escala</span>.</h1>
+                        <p>
+                            Sou desenvolvedor web full stack com experiência em front-end, back-end, automação de
+                            processos e administração de ambientes de TI.
+                            Atuo criando soluções que unem usabilidade, estabilidade e eficiência operacional, sempre
+                            com foco em resolver necessidades reais do negócios.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a class="button" href="#projetos">Ver projetos em produção</a>
+                            <a class="button-secondary" href="./Download/Curriculo - Thiago F. Rovere.pdf"
+                                target="_blank" rel="noopener noreferrer"><img src="./pictures/icones/pdf.png" alt="" style="width: 35px;">Baixar currículo</a>
+                        </div>
+
+                        <div class="hero-facts">
+                            <div class="metric-card">
+                                <strong>20+ anos</strong>
+                                <span>Vivência em suporte, manutenção, implantação e evolução de ambientes de
+                                    tecnologia.</span>
+                            </div>
+                            <div class="metric-card">
+                                <strong>Full stack</strong>
+                                <span>Entrega unindo interface, regras de negócios, automação técnica e sustentação
+                                    operacional.</span>
+                            </div>
+                            <div class="metric-card">
+                                <strong>Projetos reais</strong>
+                                <span>Experiência com sistemas institucionais, automações internas e sites para
+                                    clientes.</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <aside class="hero-panel reveal">
+                        <div class="hero-visual" id="heroVisual" aria-hidden="true">
+                            <span class="orbit-ring orbit-ring-one parallax-layer" data-depth="0.18"></span>
+                            <span class="orbit-ring orbit-ring-two parallax-layer" data-depth="0.3"></span>
+                            <span class="hero-grid-plane parallax-layer" data-depth="0.12"></span>
+                            <span class="scene-core parallax-layer" data-depth="0.38"></span>
+                            <span class="floating-badge badge-zero parallax-layer" data-depth="0.4"><img src="./pictures/icones/html.png" alt=""></span>
+                            <span class="floating-badge badge-one parallax-layer" data-depth="0.45"><img src="./pictures/icones/nodejs.png" alt=""></span>
+                            <span class="floating-badge badge-two parallax-layer" data-depth="0.32"><img src="./pictures/icones/react.png" alt=""></span>
+                            <span class="floating-badge badge-three parallax-layer" data-depth="0.24"><img src="./pictures/icones/python.png" alt=""></span>
+                            <span class="floating-badge badge-four parallax-layer" data-depth="0.28"><img src="./pictures/icones/linux.png" alt=""></span>
+                            <span class="floating-badge badge-five parallax-layer" data-depth="0.36"><img src="./pictures/icones/css.png" alt=""></span>
+                            <span class="floating-badge badge-six parallax-layer" data-depth="0.34"><img src="./pictures/icones/javascript.png" alt=""></span>
+                            <span class="floating-badge badge-seven parallax-layer" data-depth="0.26"><img src="./pictures/icones/windows.png" alt=""></span>
+                            <span class="floating-badge badge-eight parallax-layer" data-depth="0.22"><img src="./pictures/icones/powershell.png" alt=""></span>
+                        </div>
+                        <div class="portrait-card">
+                            <!-- <div class="portrait-overlay">
+                                <strong>Perfil técnico com atuação prática</strong> 
+                                <span>Experiência conectando desenvolvimento, operação e infraestrutura para entregar
+                                    soluções funcionais e sustentáveis.</span> 
+                            </div> -->
+                        </div>
+                        
+                        <div class="focus-list">
+                            <div class="focus-item">
+                                <div>
+                                    <b>Desenvolvimento orientado a resultado</b> <br>
+                                    <span>Projetos construídos para resolver demandas reais com clareza técnica, boa
+                                        experiência de uso e manutenção viável.</span>
+                                </div>
+                            </div>
+                            <div class="focus-item">
+                                <div>
+                                    <b>Automação e produtividade</b> <br>
+                                    <span>Criação de scripts e processos para reduzir tarefas manuais, padronizar
+                                        rotinas e dar mais agilidade ao suporte.</span>
+                                </div>
+                            </div>
+                            <div class="focus-item">
+                                <div>
+                                    <b>Base sólida de infraestrutura</b><br>
+                                    <span>Vivência com Windows Server, Linux, virtualização, monitoramento e sustentação
+                                        de ambientes corporativos.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section id="perfil">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <div>
+                            <div class="eyebrow">Sobre mim</div>
+                            <h2>Desenvolvimento, automação e infraestrutura com foco em solução prática</h2>
+                        </div>
+                        <p>
+                            Minha trajetória combina desenvolvimento web, suporte técnico, automação de processos e
+                            administração de infraestrutura.
+                            Gosto de atuar em projetos que exigem visão prática, responsabilidade técnica e capacidade
+                            de transformar necessidade em entrega funcional.
+                        </p>
+                    </div>
+
+                    <div class="impact-grid">
+                        <article class="section-card reveal">
+                            <h3>O que eu entrego</h3>
+                            <p>Desenvolvimento de interfaces, integrações e soluções web com foco em funcionamento real,
+                                clareza e eficiência.</p>
+                        </article>
+                        <article class="section-card reveal">
+                            <h3>Como penso</h3>
+                            <p>Analiso contexto, fluxo de uso, manutenção e impacto operacional para definir soluções
+                                consistentes e sustentáveis.</p>
+                        </article>
+                        <article class="section-card reveal">
+                            <h3>Onde gero valor</h3>
+                            <p>Projetos que precisam de alguém prático, comprometido e capaz de ir da análise à
+                                implementação com autonomia.</p>
+                        </article>
+                        <article class="section-card reveal">
+                            <h3>O que reforça senioridade</h3>
+                            <p>Vivência integrada entre desenvolvimento, suporte, infraestrutura, implantação e melhoria
+                                contínua de processos.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="competencias">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <div>
+                            <div class="eyebrow">Competências</div>
+                            <h2>Tecnologias e capacidades que fazem parte da minha atuação profissional</h2>
+                        </div>
+                        <p>
+                            Minha experiência reúne tecnologias de desenvolvimento, automação e infraestrutura que
+                            utilizo para construir,
+                            manter e evoluir soluções digitais em diferentes contextos.
+                        </p>
+                    </div>
+
+                    <div class="skills-grid">
+                        <article class="skill-card reveal interactive-card">
+                            <h3>Front-end e experiência</h3>
+                            <div class="chip-row">
+                                <span class="chip"><img src="./pictures/icones/html.png" alt=""> HTML5</span>
+                                <span class="chip"><img src="./pictures/icones/css.png" alt="" > CSS3</span>
+                                <span class="chip"><img src="./pictures/icones/javascript.png" alt=""> JavaScript</span>
+                                <span class="chip"><img src="./pictures/icones/react.png" alt=""> React</span>
+                                <span class="chip"><img src="./pictures/icones/bootstrap.png" alt=""> Bootstrap</span>
+                                <span class="chip"><img src="./pictures/icones/tailwind.png" alt=""> Tailwind</span>
+                                <span class="chip"><img src="./pictures/icones/jquery.png" alt=""> jQuery</span>
+                            </div>
+                        </article>
+
+                        <article class="skill-card reveal interactive-card">
+                            <h3>Back-end e automação</h3>
+                            <div class="chip-row">
+                                <span class="chip"><img src="./pictures/icones/nodejs.png" alt=""> Node.js</span>
+                                <span class="chip"><img src="./pictures/icones/firebase.png" alt=""> Firebase</span>
+                                <span class="chip"><img src="./pictures/icones/python.png" alt=""> Python</span>
+                                <span class="chip"><img src="./pictures/icones/powershell.png" alt=""> PowerShell</span>
+                                <span class="chip"><img src="./pictures/icones/cmd.png" alt=""> Batch</span>
+                                <span class="chip"><img src="./pictures/icones/api.png" alt=""> APIs e integrações</span>
+                            </div>
+                        </article>
+
+                        <article class="skill-card reveal interactive-card">
+                            <h3>Infraestrutura e suporte</h3>
+                            <div class="chip-row">
+                                <span class="chip"><img src="./pictures/icones/linux.png" alt=""> Linux Server</span>
+                                <span class="chip"><img src="./pictures/icones/windows.png" alt=""> Windows Server</span>
+                                <span class="chip"><img src="./pictures/icones/vmware.png" alt=""> VMware</span>
+                                <span class="chip"><img src="./pictures/icones/proxmox.png" alt=""> Proxmox</span>
+                                <span class="chip"><img src="./pictures/icones/apache.png" alt=""> Apache</span>
+                                <span class="chip"><img src="./pictures/icones/zabbix.png" alt=""> Zabbix</span>
+                                <span class="chip"><img src="./pictures/icones/windows.png" alt=""> Active Directory</span>
+                                <span class="chip"><img src="./pictures/icones/windows.png" alt=""> WDS</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="trajetoria">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <div>
+                            <div class="eyebrow">Trajetória profissional</div>
+                            <h2>Experiência construída na prática, com atuação em desenvolvimento, suporte e
+                                infraestrutura</h2>
+                        </div>
+                        <p>
+                            Ao longo da minha trajetória, atuei em ambientes onde a tecnologia precisa funcionar com
+                            estabilidade,
+                            organização e resposta rápida às demandas do dia a dia.
+                        </p>
+                    </div>
+
+                    <div class="timeline">
+                        <article class="timeline-item reveal">
+                            <div class="timeline-meta">
+                                <span>2025 - Atual</span>
+                                <strong>Getinfo Soluções - TRT - 12ª Vara do Tribunal Regional do Trabalho</strong>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Suporte, manutenção e apoio à informatização</h3>
+                                <p>
+                                    Atendimento e suporte técnico N1 e N2 a usuários do Tribunal Regional do Trabalho,
+                                    com foco em manutenção de equipamentos, implantação de tecnologia e suporte a
+                                    sistemas corporativos.
+                                </p>
+                                <ul>
+                                    <li>Diagnóstico e resolução de incidentes em hardware e software.</li>
+                                    <li>Suporte a sistemas corporativos utilizados no ambiente do TRT.</li>
+                                    <li>Atendimento remoto por meio de ferramentas de acesso remoto.</li>
+                                    <li>Configuração, manutenção e atualização de estações de trabalho</li>
+                                    <li>Apoio aos usuários quanto ao uso correto dos sistemas e recursos de TI</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item reveal">
+                            <div class="timeline-meta">
+                                <span>2024 - Atual</span>
+                                <strong>SES - Secretaria de SaÃºde de Santa Catarina</strong>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Suporte, manutenção e apoio à informatização</h3>
+                                <p>
+                                    Atuação voltada à manutenção de equipamentos, apoio à implantação de tecnologia,
+                                    acompanhamento do uso dos sistemas,
+                                    prevenção de incidentes e suporte aos setores na utilização de recursos
+                                    informatizados.
+                                </p>
+                                <ul>
+                                    <li>Desenvolvimento de aplicações e scripts utilizando JavaScript, HTML, CSS (front-end e back-end).</li>
+                                    <li>Criação de automações em Python, PowerShell e scripts Batch.</li>
+                                    <li>Administração de banco de dados MySQL.</li>
+                                    <li>Gerenciamento de ambientes virtualizados com VMware e Proxmox</li>
+                                    <li>Configuração e manutenção de servidores.</li>
+                                    <li>Implementação e manutenção do sistema de chamados GLPI</li>
+                                    <li>Gerenciamento de Active Directory e WDS</li>
+                                    <li>Criação e manutenção de imagens personalizadas do Windows 7, 10 Pro e 11 Pro</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item reveal">
+                            <div class="timeline-meta">
+                                <span>2022 - atual</span>
+                                <strong>Freelancer</strong>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Projetos web e soluções sob demanda</h3>
+                                <p>
+                                    Desenvolvimento de websites, interfaces institucionais, automações e sistemas
+                                    orientados à necessidade do cliente.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item reveal">
+                            <div class="timeline-meta">
+                                <span>2015 - atual</span>
+                                <strong>Mercado Rovere - Sócio</strong>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Manutenção e assistência de sistema operacional do negócio</h3>
+                                <p>
+                                    Experiência próxima à operação diária do estabelecimento, garantindo manutenção do
+                                    sistema, suporte técnico e continuidade do uso.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item reveal">
+                            <div class="timeline-meta">
+                                <span>Base formativa</span>
+                                <strong>Certificações e cursos</strong>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Formação técnica combinada com atualização contínua</h3>
+                                <ul>
+                                    <li>Cursando 2° ano da Ciências da computação, Faculdade GRAN.</li>
+                                    <li>Carreira Tech - Trilha Desenvolvimento de Software. SCTEC - SESI SENAI</li>
+                                    <li>Bootcamp Santander Cibersegurança 2025 - DIO.me</li>
+                                    <li>Programador BR - Desenvolvedor Web Full Stack.</li>
+                                    <li>Senac - Técnico em Informática.</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projetos">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <div>
+                            <div class="eyebrow">Projetos em destaque</div>
+                            <h2>Projetos que representam minha experiência com sistemas, sites e soluções voltadas à
+                                operação</h2>
+                        </div>
+                        <p>
+                            Aqui estão alguns trabalhos que mostram meu repertório em interfaces, sistemas internos,
+                            sites institucionais
+                            e soluções desenvolvidas para necessidades específicas.
+                        </p>
+                    </div>
+
+                    <div class="projects-grid">
+                        <article class="project-card reveal interactive-card">
+                            <div class="project-thumb">
+                                <img src="./pictures/pdv1.png" alt="Projeto Sistema PDV completo">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-topline">
+                                    <h3>Sistema PDV Balão</h3>
+                                    <span>Comercial</span>
+                                </div>
+                                <p>
+                                    Sistema completo para gerenciamento de vendas em balcão, com funcionalidades de
+                                    cadastro, emissão de recibos e controle de estoque.
+                                </p>
+                                <div class="chip-row" style="margin-top: 16px;">
+                                    <span class="chip"><img src="./pictures/icones/nodejs.png" alt="">Node.js</span>
+                                    <span class="chip"><img src="./pictures/icones/supabase.png" alt="">Supabase</span>
+                                </div>
+                                <div class="project-links">
+                                    <a class="project-link primary"
+                                        href="https://www.tfrtech.com.br/pdv-balcao/index.html" target="_blank"
+                                        rel="noopener noreferrer"><img src="./pictures/icones/back.png" alt="">Abrir projeto</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-card reveal interactive-card">
+                            <div class="project-thumb">
+                                <img src="./pictures/isabela.png" alt="Site Studio Pilates">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-topline">
+                                    <h3>Studio Isabela Passos</h3>
+                                    <span>Comercial</span>
+                                </div>
+                                <p>
+                                    Web-site para apresentação e divulgação de serviços de do studio de fisioterapia e pilates.
+                                </p>
+                                <div class="chip-row" style="margin-top: 16px;">
+                                    <span class="chip"><img src="./pictures/icones/javascript.png" alt="" style="width: 20px;    ">JavaScript</span>
+                                    <span class="chip"><img src="./pictures/icones/html.png" alt="">HTML</span>
+                                    <span class="chip"><img src="./pictures/icones/css.png" alt="">CSS</span>
+                                </div>
+                                <div class="project-links">
+                                    <a class="project-link primary" href="./studioisabela/index.html" target="_blank"
+                                        rel="noopener noreferrer"><img src="./pictures/icones/back.png" alt="">Abrir projeto</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-card reveal interactive-card">
+                            <div class="project-thumb">
+                                <img src="./pictures/gaya.png" alt="Projeto Gaia">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-topline">
+                                    <h3>Gaia</h3>
+                                    <span>E-commerce</span>
+                                </div>
+                                <p>
+                                    Estrutura mais próxima de catálogo e operação comercial, com visão de carrinho,
+                                    dashboard administrativo e organização por módulos.
+                                </p>
+                                <div class="chip-row" style="margin-top: 16px;">
+                                    <span class="chip"><img src="./pictures/icones/html.png" alt="">HTML</span>
+                                    <span class="chip"><img src="./pictures/icones/css.png" alt="">CSS</span>
+                                    <span class="chip"><img src="./pictures/icones/javascript.png" alt="">JavaScript</span>
+                                    <span class="chip"><img src="./pictures/icones/supabase.png" alt="">Supabase</span>
+
+
+                                </div>
+                                <div class="project-links">
+                                    <a class="project-link primary" href="./gaia/index.html" target="_blank"
+                                        rel="noopener noreferrer"><img src="./pictures/icones/back.png" alt="">Abrir projeto</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-card reveal interactive-card">
+                            <div class="project-thumb">
+                                <img src="./pictures/tea2.png" alt="Projeto TEA Tapera">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-topline">
+                                    <h3>Projeto TEA Tapera</h3>
+                                    <span>Institucional</span>
+                                </div>
+                                <p>
+                                    Web-site para apresentação e divulgação de serviços do Projeto TEA Tapera, projeto voltado para a comunidade.
+                                </p>
+                                <div class="chip-row" style="margin-top: 16px;">
+                                    <span class="chip"><img src="./pictures/icones/javascript.png" alt="">JavaScript</span>
+                                    <span class="chip"><img src="./pictures/icones/html.png" alt="">HTML</span>
+                                    <span class="chip"><img src="./pictures/icones/css.png" alt="">CSS</span>
+                                </div>
+                                <div class="project-links">
+                                    <a class="project-link primary" href="./teatapera/index.html" target="_blank"
+                                        rel="noopener noreferrer"><img src="./pictures/icones/back.png" alt="">Abrir projeto</a>
+                                </div>
+                            </div>
+                        </article>
+
+
+
+
+                        <article class="project-card reveal interactive-card">
+                            <div class="project-thumb">
+                                <img src="./pictures/estacionamento.png" alt="Sistema de controle de estacionamento">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-topline">
+                                    <h3>Controle de estacionamento</h3>
+                                    <span>Sistema interno</span>
+                                </div>
+                                <p>
+                                    Solução voltada a cadastro, autenticação e controle operacional, garantindo um sistema de cadastro e pesquisa completo, para o seu comércio ou empresa.
+                                </p>
+                                <div class="chip-row" style="margin-top: 16px;">
+                                    <span class="chip"><img src="./pictures/icones/html.png" alt="">HTML</span>
+                                    <span class="chip"><img src="./pictures/icones/css.png" alt="">CSS</span>
+                                    <span class="chip"><img src="./pictures/icones/javascript.png" alt="">JavaScript</span>
+                                    <span class="chip"><img src="./pictures/icones/firebase.png" alt="">Firebase</span>
+                                </div>
+                                <div class="project-links">
+                                    <a class="project-link primary" href="./controle_estacionamento/index.html"
+                                        target="_blank" rel="noopener noreferrer"><img src="./pictures/icones/back.png" alt="">Abrir projeto</a>
+                                </div>
+                            </div>
+                        </article>
+
+
+
+                        
+                        <article class="project-card reveal interactive-card">
+                            <div class="project-thumb">
+                                <img src="./pictures/PSX_Prog_3.png" alt="Projeto de impressão 3D">
+                            </div>
+                            <div class="project-body">
+                                <div class="project-topline">
+                                    <h3>Projeto impressão 3D</h3>
+                                    <span>Nicho técnico</span>
+                                </div>
+                                <p>
+                                    Página voltada à demonstração de serviço especializado, fortalecendo repertório em
+                                    construção de presença digital para negócios segmentados.
+                                </p>
+                                <div class="chip-row" style="margin-top: 16px;">
+                                    <span class="chip"><img src="./pictures/icones/html.png" alt="">HTML</span>
+                                    <span class="chip"><img src="./pictures/icones/css.png" alt="">CSS</span>
+                                    <span class="chip"><img src="./pictures/icones/javascript.png" alt="">JavaScript</span>
+                                </div>
+                                <div class="project-links">
+                                    <a class="project-link primary" href="./projetoimpressao3d/impressao3d.html"
+                                        target="_blank" rel="noopener noreferrer"><img src="./pictures/icones/back.png" alt="">Abrir projeto</a>
+                                </div>
+                            </div>
+                        </article>
+
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="contato">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <div>
+                            <div class="eyebrow">Contato</div>
+                            <h2>Vamos conversar sobre oportunidades, projetos e soluções em tecnologia</h2>
+                        </div>
+                        <p>
+                            Deixo abaixo meus principais canais de contato e perfis profissionais para facilitar a
+                            comunicação
+                            e a apresentação do meu trabalho.
+                        </p>
+                    </div>
+
+                    <div class="contact-grid">
+                        <article class="contact-card reveal interactive-card">
+                            <h3>Canais principais</h3>
+                            <p>
+                                Estou disponivel para oportunidades em desenvolvimento web, automação de processos,
+                                suporte técnico avançado
+                                e funções que unam tecnologia, operação e melhoria contínua.
+                            </p>
+                            <div class="contact-stack">
+                                <a class="contact-item" href="https://wa.me/5548988280261" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <div>
+                                        <strong>WhatsApp</strong>
+                                        <span>+55 48 98828-0261</span>
+                                    </div>
+                                    <span>Contato rápido</span>
+                                </a>
+                                <a class="contact-item"
+                                    href="https://www.linkedin.com/in/thiago-ferreira-r%C3%B4vere-783734223"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <div>
+                                        <strong>LinkedIn</strong>
+                                        <span>Canal principal para recrutadores e networking profissional</span>
+                                    </div>
+                                    <span>Conectar agora</span>
+                                </a>
+                                <a class="contact-item" href="./Download/Curriculo - Thiago F. Rovere.pdf"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <div>
+                                        <strong>Currículo</strong>
+                                        <span>Versão em PDF pronta para avaliação</span>
+                                    </div>
+                                    <span>Baixar agora</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="contact-card reveal interactive-card">
+                            <h3>Links profissionais</h3>
+                            <p>Nestes canais você pode acompanhar meu histórico profissional, meus projetos e outras
+                                formas de contato.</p>
+                            <div class="social-list">
+                                <a class="social-item"
+                                    href="https://www.linkedin.com/in/thiago-ferreira-r%C3%B4vere-783734223"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <div>
+                                        <strong>LinkedIn</strong>
+                                        <span>Perfil profissional para recrutadores e networking</span>
+                                    </div>
+                                    <img src="./pictures/linkdin.png" alt="LinkedIn">
+                                </a>
+                                <a class="social-item" href="https://github.com/ThiagoFRovere" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <div>
+                                        <strong>GitHub</strong>
+                                        <span>Repositórios e evidências técnicas</span>
+                                    </div>
+                                    <img src="./pictures/github.png" alt="GitHub">
+                                </a>
+                                <a class="social-item" href="https://www.instagram.com/thiagorovere/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <div>
+                                        <strong>Instagram</strong>
+                                        <span>Presença pessoal e criativa</span>
+                                    </div>
+                                    <img src="./pictures/instagram.png" alt="Instagram">
+                                </a>
+                                <a class="social-item" href="https://www.facebook.com/ThiagoFerreiraRovere1"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <div>
+                                        <strong>Facebook</strong>
+                                        <span>Canal adicional de contato</span>
+                                    </div>
+                                    <img src="./pictures/facebook.png" alt="Facebook">
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <article class="recruiter-note reveal">
+                        <div class="eyebrow">Objetivo profissional</div>
+                        <h3>Busco contribuir com projetos que valorizem solução prática, evolução ténica e impacto real
+                        </h3>
+                        <p>
+                            Meu objetivo é atuar em equipes e projetos onde eu possa aplicar minha experiência em
+                            desenvolvimento web,
+                            automação, suporte e infraestrutura para construir soluções confiáveis, úteis e alinhadas às
+                            necessidades do negócio.
+                        </p>
+                        <div class="recruiter-score">Interesse em oportunidades com perfil full stack, automação,
+                            sustentação ténica e evolução de sistemas</div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-panel reveal">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h3>Thiago Ferreira Rôvere</h3>
+                        <p class="footer-summary">Desenvolvimento de software, automações e soluções web personalizadas.
+                        </p>
+                    </div>
+
+                    <div class="footer-nav">
+                        <h4 class="footer-title">Links rápidos</h4>
+                        <ul class="footer-links">
+                            <li><a href="#inicio">Início</a></li>
+                            <li><a href="#perfil">Sobre mim</a></li>
+                            <li><a href="#competencias">Competências</a></li>
+                            <li><a href="#trajetoria">Trajetória</a></li>
+                            <li><a href="#projetos">Projetos</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-contact">                
+                        <h4 class="footer-title">WhatsApp</h4>
+                        <p>Envie uma mensagem rápida com nome, assunto e texto.</p>
+
+                        <form class="whatsapp-form" id="whatsappForm">
+                            <input class="footer-input" id="waName" name="waName" type="text" placeholder="Seu nome"
+                                required>
+                            <input class="footer-input" id="waSubject" name="waSubject" type="text"
+                                placeholder="Assunto" required>
+                            <textarea class="footer-textarea" id="waMessage" name="waMessage"
+                                placeholder="Escreva sua mensagem" required></textarea>
+                            <div class="footer-form-actions">
+                                <button class="button footer-submit" type="submit">Enviar no WhatsApp</button>
+                                <span class="whatsapp-helper">A mensagem será aberta no WhatsApp antes do envio.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-inner">
+                    <span>Thiago Ferreira Rôvere • Desenvolvimento web, automação, suporte e infraestrutura.</span>
+                    <span>Disponível para oportunidades e projetos em tecnologia.</span>
+                </div>
+            </div>
+        </footer>
+
+        <a class="floating-cta" href="https://wa.me/5548991358913" target="_blank" rel="noopener noreferrer"
+            aria-label="Conversar pelo WhatsApp">
+            <img src="./pictures/whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
