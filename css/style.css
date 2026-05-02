@@ -282,6 +282,7 @@
      border: 1px solid var(--line);
      box-shadow: var(--shadow);
      backdrop-filter: blur(18px);
+     z-index: 100;
  }
 
  .hero-copy {
@@ -586,7 +587,7 @@
      min-height: 420px;
      background:
          linear-gradient(180deg, rgba(7, 17, 31, 0.1), rgba(7, 17, 31, 0.85)),
-         url("../pictures/perfil3.png") center top / cover no-repeat;
+         url("../pictures/perfil4.png") center top / cover no-repeat;
      border: 1px solid rgba(255, 255, 255, 0.06);
      z-index: 1;
  }
