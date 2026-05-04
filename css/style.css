@@ -223,6 +223,7 @@
      border-radius: 16px;
      color: var(--text);
      cursor: pointer;
+     z-index: 999;
  }
 
  .menu-toggle span,
@@ -282,7 +283,7 @@
      border: 1px solid var(--line);
      box-shadow: var(--shadow);
      backdrop-filter: blur(18px);
-     z-index: 100;
+     z-index: 1;
  }
 
  .hero-copy {
