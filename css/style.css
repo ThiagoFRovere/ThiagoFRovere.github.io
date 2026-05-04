@@ -255,7 +255,7 @@
  }
 
  main section {
-     padding: 88px 0;
+     padding: 45px 0;
  }
 
  .hero {
@@ -706,10 +706,9 @@
      line-height: 1.75;
  }
 
- .impact-grid,
- .skills-grid,
- .projects-grid,
- .contact-grid {
+.impact-grid,
+.skills-grid,
+.contact-grid {
      display: grid;
      gap: 18px;
  }
@@ -848,14 +847,121 @@
      margin-right: 10px;
  }
 
- .projects-grid {
-     grid-template-columns: repeat(2, minmax(0, 1fr));
+.projects-carousel {
+     display: grid;
+     gap: 22px;
+ }
+
+.projects-carousel-head {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 16px;
+ }
+
+.projects-carousel-copy {
+     display: flex;
+     align-items: center;
+     gap: 16px;
+     flex-wrap: wrap;
+ }
+
+.projects-carousel-label {
+     color: var(--muted);
+     font-size: 0.92rem;
+     letter-spacing: 0.04em;
+     text-transform: uppercase;
+ }
+
+.projects-carousel-status {
+     display: inline-flex;
+     align-items: center;
+     gap: 8px;
+     padding: 10px 14px;
+     border-radius: 999px;
+     background: rgba(255, 255, 255, 0.04);
+     border: 1px solid rgba(255, 255, 255, 0.08);
+     font-weight: 700;
+ }
+
+.projects-carousel-controls {
+     display: flex;
+     gap: 10px;
+ }
+
+.carousel-control {
+     width: 48px;
+     height: 48px;
+     border: 1px solid rgba(255, 255, 255, 0.08);
+     border-radius: 50%;
+     background: rgba(255, 255, 255, 0.04);
+     color: var(--text);
+     display: inline-grid;
+     place-items: center;
+     cursor: pointer;
+     transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, opacity 0.25s ease;
+ }
+
+.carousel-control:hover,
+.carousel-control:focus-visible {
+     transform: translateY(-2px);
+     border-color: rgba(110, 231, 200, 0.4);
+     background: rgba(110, 231, 200, 0.08);
+     outline: none;
+ }
+
+.carousel-control[disabled] {
+     opacity: 0.45;
+     cursor: not-allowed;
+     transform: none;
+ }
+
+.projects-viewport {
+     overflow: hidden;
+ }
+
+.projects-grid {
+     display: flex;
+     gap: 18px;
+     transition: transform 0.45s ease;
+     will-change: transform;
  }
 
  .project-card {
+     flex: 0 0 calc((100% - 18px) / 2);
      border-radius: var(--radius-lg);
      overflow: hidden;
      position: relative;
+ }
+
+.projects-carousel-dots {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     flex-wrap: wrap;
+ }
+
+.carousel-dot {
+     width: 11px;
+     height: 11px;
+     border-radius: 50%;
+     border: none;
+     background: rgba(255, 255, 255, 0.18);
+     cursor: pointer;
+     transition: transform 0.25s ease, background 0.25s ease;
+ }
+
+.carousel-dot:hover,
+.carousel-dot:focus-visible {
+     transform: scale(1.08);
+     background: rgba(255, 255, 255, 0.36);
+     outline: none;
+ }
+
+.carousel-dot.is-active {
+     background: var(--accent);
+     transform: scale(1.15);
  }
 
  .project-thumb {
@@ -1438,15 +1544,14 @@
 
  @media (max-width: 1080px) {
 
-     .hero-grid,
-     .contact-grid,
-     .section-heading,
-     .projects-grid,
-     .impact-grid,
-     .skills-grid,
-     .footer-grid {
-         grid-template-columns: 1fr;
-     }
+    .hero-grid,
+    .contact-grid,
+    .section-heading,
+    .impact-grid,
+    .skills-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
 
      .hero-visual {
          width: 240px;
@@ -1534,15 +1639,31 @@
          grid-template-columns: 1fr;
      }
 
-     .timeline-item {
-         grid-template-columns: 1fr;
-         gap: 12px;
-     }
- }
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
 
- @media (max-width: 580px) {
+    .project-card {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    .projects-carousel-head {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .projects-carousel-copy,
+    .projects-carousel-controls {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 580px) {
      main section {
-         padding: 74px 0;
+         padding: 20px 0;
      }
 
      .hero {
@@ -1587,6 +1708,17 @@
          width: 170px;
          opacity: 0.55;
      }
+     #contact-card-primary{
+        display: none;
+     }
+     .link-off{
+        display: none;
+     }
+     .footer-brand,
+     .footer-nav,
+     .footer-inner{
+        display: none;
+     }
 
      .floating-badge {
          width: 40px;
@@ -1612,9 +1744,23 @@
          max-width: none;
      }
 
-     .footer-form-actions {
-         justify-content: center;
-     }
+    .footer-form-actions {
+        justify-content: center;
+    }
+
+    .projects-carousel-copy {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .projects-carousel-controls {
+        width: 100%;
+    }
+
+    .carousel-control {
+        flex: 1 1 0;
+        border-radius: 18px;
+    }
 
 
 
