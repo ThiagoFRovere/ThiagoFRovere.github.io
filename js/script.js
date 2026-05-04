@@ -282,6 +282,113 @@
             });
         }
 
+        const projectsCarousel = document.querySelector("[data-carousel]");
+
+        if (projectsCarousel) {
+            const track = projectsCarousel.querySelector(".projects-grid");
+            const cards = Array.from(projectsCarousel.querySelectorAll(".project-card"));
+            const prevButton = projectsCarousel.querySelector("[data-carousel-prev]");
+            const nextButton = projectsCarousel.querySelector("[data-carousel-next]");
+            const dotsContainer = projectsCarousel.querySelector("[data-carousel-dots]");
+            const currentLabel = projectsCarousel.querySelector("[data-carousel-current]");
+            const totalLabel = projectsCarousel.querySelector("[data-carousel-total]");
+            let pageIndex = 0;
+            let pageCount = 1;
+            let slidesPerView = 2;
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            function getSlidesPerView() {
+                return window.matchMedia("(max-width: 860px)").matches ? 1 : 2;
+            }
+
+            function buildDots() {
+                if (!dotsContainer) return;
+
+                dotsContainer.innerHTML = "";
+
+                for (let index = 0; index < pageCount; index += 1) {
+                    const dot = document.createElement("button");
+                    dot.type = "button";
+                    dot.className = "carousel-dot";
+                    dot.setAttribute("aria-label", `Ir para a página ${index + 1} dos projetos`);
+                    dot.addEventListener("click", () => {
+                        pageIndex = index;
+                        updateCarousel();
+                    });
+                    dotsContainer.appendChild(dot);
+                }
+            }
+
+            function updateCarousel() {
+                if (!track || !cards.length) return;
+
+                const firstCardIndex = pageIndex * slidesPerView;
+                const targetCard = cards[firstCardIndex];
+                const dots = dotsContainer ? Array.from(dotsContainer.querySelectorAll(".carousel-dot")) : [];
+
+                if (targetCard) {
+                    track.style.transform = `translateX(-${targetCard.offsetLeft}px)`;
+                }
+
+                if (currentLabel) currentLabel.textContent = String(pageIndex + 1).padStart(2, "0");
+                if (totalLabel) totalLabel.textContent = String(pageCount).padStart(2, "0");
+                if (prevButton) prevButton.disabled = pageIndex === 0;
+                if (nextButton) nextButton.disabled = pageIndex >= pageCount - 1;
+
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle("is-active", index === pageIndex);
+                    dot.setAttribute("aria-current", index === pageIndex ? "true" : "false");
+                });
+            }
+
+            function setupCarousel() {
+                slidesPerView = getSlidesPerView();
+                pageCount = Math.max(1, Math.ceil(cards.length / slidesPerView));
+                pageIndex = Math.min(pageIndex, pageCount - 1);
+                buildDots();
+                updateCarousel();
+            }
+
+            if (prevButton) {
+                prevButton.addEventListener("click", () => {
+                    pageIndex = Math.max(0, pageIndex - 1);
+                    updateCarousel();
+                });
+            }
+
+            if (nextButton) {
+                nextButton.addEventListener("click", () => {
+                    pageIndex = Math.min(pageCount - 1, pageIndex + 1);
+                    updateCarousel();
+                });
+            }
+
+            if (track) {
+                track.addEventListener("touchstart", (event) => {
+                    touchStartX = event.changedTouches[0].clientX;
+                }, { passive: true });
+
+                track.addEventListener("touchend", (event) => {
+                    touchEndX = event.changedTouches[0].clientX;
+                    const deltaX = touchEndX - touchStartX;
+
+                    if (Math.abs(deltaX) < 50) return;
+
+                    if (deltaX > 0) {
+                        pageIndex = Math.max(0, pageIndex - 1);
+                    } else {
+                        pageIndex = Math.min(pageCount - 1, pageIndex + 1);
+                    }
+
+                    updateCarousel();
+                }, { passive: true });
+            }
+
+            setupCarousel();
+            window.addEventListener("resize", setupCarousel);
+        }
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
